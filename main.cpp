@@ -2,32 +2,55 @@
 #include "Lista.h"
 #include "Bloque.h"
 #include "Archivo.h"
+#include "BManager.h"
+
+
 using namespace std;
 
 
-class BManager{
-    public:
-        BManager(char * ){
-            cant = 0;
-            sizeB = 512;
-        }
-        int cant;
-        int sizeB;
-        Archivo * arch;
-
-        void newBloque(){
-            cant++;
-            Bloque* bl = new Bloque(sizeB, );
-        }
-};
 
 int main(){
 
-    Archivo * ar = new Archivo("db.txt");
 
-    char wow[20] = "fuckkck";
+//    int x = 1234;
+//
+//    char y[4];
+//
+//    memcpy(&y[0], &x, 4);
+//
+//    cout << y << endl;
+//
+//    man->arch->write(&y[0], 0, 4);
+//
+//    char * data;
+//    data = man->arch->read(0, 4);
+//
+//    memcpy(&x, &data[0], 4);
+//
+//    cout << x << endl;
 
-    ar->write(&wow[0], 0, 0);
+    Bloque* b = new Bloque(512);
+
+    b->num = 0;
+
+
+    b->write();
+
+    b->read(0);
+
+    Bloque * c = new Bloque(512);
+
+    c->num = 12;
+
+    c->sizeB = 15;
+
+    c->read(0);
+
+    cout << c->num << " - " << c->sizeB << endl;
+
+
+
+
 
     return 0;
 

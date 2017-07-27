@@ -13,6 +13,8 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include" />
+					<Add directory="../DBE260717" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +24,8 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include" />
+					<Add directory="../DBE260717" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -34,8 +38,12 @@
 		</Compiler>
 		<Unit filename="Archivo.cpp" />
 		<Unit filename="Archivo.h" />
+		<Unit filename="BManager.cpp" />
+		<Unit filename="BManager.h" />
 		<Unit filename="Bloque.cpp" />
 		<Unit filename="Bloque.h" />
+		<Unit filename="BloqueTablas.cpp" />
+		<Unit filename="BloqueTablas.h" />
 		<Unit filename="Lista.cpp" />
 		<Unit filename="Lista.h" />
 		<Unit filename="Nodo.cpp" />
