@@ -42,6 +42,7 @@
 		<Unit filename="BManager.h" />
 		<Unit filename="Bloque.cpp" />
 		<Unit filename="Bloque.h" />
+		<Unit filename="BloqueTabla.cpp" />
 		<Unit filename="BloqueTabla.h" />
 		<Unit filename="Lista.cpp" />
 		<Unit filename="Lista.h" />
