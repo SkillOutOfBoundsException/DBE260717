@@ -18,10 +18,9 @@ char * Bloque::toChar(){
     return data;
 }
 
-void Bloque::load(char data[512]){
+void Bloque::load(char * data){
     int pos = 0;
     memcpy(&sizeB, &data[pos], 4);
-    cout << sizeB << endl;
     pos = pos + 4;
     memcpy(&num, &data[pos], 4);
     pos = pos + 4;
@@ -31,7 +30,8 @@ void Bloque::load(char data[512]){
 
 void Bloque::write(){
     arch->open("r+");
-    arch->write(toChar(), num*sizeB, sizeB);
+    char * data = toChar();
+    arch->write(data, num*sizeB, sizeB);
     arch->close();
 }
 
@@ -41,5 +41,3 @@ void Bloque::read(int n){
     load(data);
     arch->close();
 }
-
-

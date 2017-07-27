@@ -16,7 +16,7 @@ class Bloque{
         Archivo * arch;
 
         char * toChar();
-        void load(char data[512]);
+        void load(char * data);
 
         void write();
         void read(int n);

@@ -12,7 +12,7 @@ void Archivo::write(char * data, int pos, int length){
 char * Archivo::read(int pos, int length){
     fseek(myFile, pos, SEEK_SET);
     char data[length];
-    fread(data, sizeof(char), length, myFile);
+    fread(data, 1, length, myFile);
     return data;
 }
 
