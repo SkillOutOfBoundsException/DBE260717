@@ -1,0 +1,33 @@
+# depslib dependency file v1.0
+1501113429 source:c:\users\diegu7\c++things\dbe260717\archivo.cpp
+	"Archivo.h"
+
+1501113303 c:\users\diegu7\c++things\dbe260717\archivo.h
+	<stdio.h>
+	<string.h>
+
+1501104258 source:c:\users\diegu7\c++things\dbe260717\bloque.cpp
+	"Bloque.h"
+
+1501104248 c:\users\diegu7\c++things\dbe260717\bloque.h
+	<string.h>
+
+1488924860 source:c:\users\diegu7\c++things\dbe260717\lista.cpp
+	"Lista.h"
+
+1489005671 c:\users\diegu7\c++things\dbe260717\lista.h
+	"Nodo.h"
+	<stdexcept>
+	<iostream>
+
+1488995098 c:\users\diegu7\c++things\dbe260717\nodo.h
+
+1488922731 source:c:\users\diegu7\c++things\dbe260717\nodo.cpp
+	"Nodo.h"
+
+1501113463 source:c:\users\diegu7\c++things\dbe260717\main.cpp
+	<iostream>
+	"Lista.h"
+	"Bloque.h"
+	"Archivo.h"
+
