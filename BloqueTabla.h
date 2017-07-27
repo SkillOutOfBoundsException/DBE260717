@@ -17,13 +17,12 @@ class BloqueTabla : public Bloque{
         };
 
         BloqueTabla(int t);
-        Lista<Tabla*> tablas;
+        Lista<Tabla*> *tablas;
         int cantTablas;
 
 
-
-
-
+        char * tablaToChar(Tabla*);
+        Tabla* charToTabla(char*);
 };
 
 #endif // BLOQUETABLA_H
