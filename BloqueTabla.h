@@ -1,15 +1,29 @@
 #ifndef BLOQUETABLA_H
 #define BLOQUETABLA_H
+#include "Bloque.h"
+#include "Lista.h"
 
 
-class BloqueTabla
-{
+class BloqueTabla : public Bloque{
     public:
-        BloqueTabla();
 
-    protected:
+        struct Tabla{
+            char nombre[20];
+            int id;
+            int primerBloqueCampo;
+            int actualBloqueCampo;
+            int primerBloqueReg;
+            int actualBloqueReg;
+        };
 
-    private:
+        BloqueTabla(int t);
+        Lista<Tabla*> tablas;
+        int cantTablas;
+
+
+
+
+
 };
 
 #endif // BLOQUETABLA_H
