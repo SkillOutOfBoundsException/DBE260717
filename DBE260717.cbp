@@ -38,8 +38,6 @@
 		</Compiler>
 		<Unit filename="Archivo.cpp" />
 		<Unit filename="Archivo.h" />
-		<Unit filename="BManager.cpp" />
-		<Unit filename="BManager.h" />
 		<Unit filename="Bloque.cpp" />
 		<Unit filename="Bloque.h" />
 		<Unit filename="BloqueTabla.cpp" />
@@ -48,6 +46,8 @@
 		<Unit filename="Lista.h" />
 		<Unit filename="Nodo.cpp" />
 		<Unit filename="Nodo.h" />
+		<Unit filename="Tabla.cpp" />
+		<Unit filename="Tabla.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

@@ -2,27 +2,19 @@
 #define BLOQUETABLA_H
 #include "Bloque.h"
 #include "Lista.h"
+#include "Tabla.h"
+#define tablaSize 40 //tabla size
 
 
 class BloqueTabla : public Bloque{
+
     public:
-
-        struct Tabla{
-            char nombre[20];
-            int id;
-            int primerBloqueCampo;
-            int actualBloqueCampo;
-            int primerBloqueReg;
-            int actualBloqueReg;
-        };
-
         BloqueTabla(int t);
         Lista<Tabla*> *tablas;
         int cantTablas;
 
-
-        char * tablaToChar(Tabla*);
-        Tabla* charToTabla(char*);
+        char * toChar();
+        void load(char* data);
 };
 
 #endif // BLOQUETABLA_H
