@@ -44,7 +44,7 @@ char* Tabla::toChar(){
 }
 
 void Tabla::printTabla(){
-    cout << "Tabla - " << nombre << endl;
+    cout << nombre << endl;
     cout << id << endl;
     cout << primerBloqueCampo << endl;
     cout << actualBloqueCampo << endl;

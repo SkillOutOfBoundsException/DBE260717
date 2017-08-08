@@ -2,6 +2,7 @@
 #define TABLA_H
 #include <string.h>
 #include <iostream>
+#include <stdio.h>
 
 using namespace std;
 

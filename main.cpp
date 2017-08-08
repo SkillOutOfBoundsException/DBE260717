@@ -21,19 +21,19 @@ int main(){
 
     bt->tablas->index(0)->printTabla();
 
-    //cout << bt->tablas->isEmpty() << endl;
+    cout << bt->tablas->isEmpty() << endl;
 
 //    b->write();
 //
-//    Tabla * t = new Tabla();
+//    Tabla * t = new Tabla(0);
 //
 //    t->id = 0;
-//    memcpy(&t->nombre[0], "tabla1", 7);
+//    char a[20] = "fuck niggas";
+//    memcpy(&t->nombre[0], &a[0], 20);
 //
 //    bt->addTabla(t);
 //
 //    bt->write();
-
 
     return 0;
 

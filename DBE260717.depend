@@ -36,7 +36,7 @@
 	"Archivo.h"
 	"BManager.h"
 
-1501143007 source:c:\users\diegu7-cb1\documents\c++\dbe260717\archivo.cpp
+1502154454 source:c:\users\diegu7-cb1\documents\c++\dbe260717\archivo.cpp
 	"Archivo.h"
 
 1501142020 c:\users\diegu7-cb1\documents\c++\dbe260717\archivo.h
@@ -44,10 +44,10 @@
 	<string.h>
 	<iostream>
 
-1501142961 source:c:\users\diegu7-cb1\documents\c++\dbe260717\bloque.cpp
+1502154454 source:c:\users\diegu7-cb1\documents\c++\dbe260717\bloque.cpp
 	"Bloque.h"
 
-1501142545 c:\users\diegu7-cb1\documents\c++\dbe260717\bloque.h
+1502154454 c:\users\diegu7-cb1\documents\c++\dbe260717\bloque.h
 	<string.h>
 	<iostream>
 	"Archivo.h"
@@ -55,17 +55,18 @@
 1501115148 source:c:\users\diegu7-cb1\documents\c++\dbe260717\lista.cpp
 	"Lista.h"
 
-1501115148 c:\users\diegu7-cb1\documents\c++\dbe260717\lista.h
+1502154454 c:\users\diegu7-cb1\documents\c++\dbe260717\lista.h
 	"Nodo.h"
 	<stdexcept>
 	<iostream>
 
 1501115148 c:\users\diegu7-cb1\documents\c++\dbe260717\nodo.h
 
-1501141670 source:c:\users\diegu7-cb1\documents\c++\dbe260717\main.cpp
+1502161500 source:c:\users\diegu7-cb1\documents\c++\dbe260717\main.cpp
 	<iostream>
 	"Lista.h"
 	"Bloque.h"
+	"BloqueTabla.h"
 	"Archivo.h"
 	"BManager.h"
 
@@ -104,5 +105,21 @@
 	"Bloque.h"
 
 1502142435 source:c:\users\diegu7\c++things\dbe260717\tabla.cpp
+	"Tabla.h"
+
+1502160472 source:c:\users\diegu7-cb1\documents\c++\dbe260717\bloquetabla.cpp
+	"BloqueTabla.h"
+
+1502154454 c:\users\diegu7-cb1\documents\c++\dbe260717\bloquetabla.h
+	"Bloque.h"
+	"Lista.h"
+	"Tabla.h"
+
+1502160783 c:\users\diegu7-cb1\documents\c++\dbe260717\tabla.h
+	<string.h>
+	<iostream>
+	<stdio.h>
+
+1502160906 source:c:\users\diegu7-cb1\documents\c++\dbe260717\tabla.cpp
 	"Tabla.h"
 
