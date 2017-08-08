@@ -1,12 +1,14 @@
 #ifndef TABLA_H
 #define TABLA_H
 #include <string.h>
+#include <iostream>
 
+using namespace std;
 
 class Tabla
 {
     public:
-        Tabla();
+        Tabla(int n);
 
         char nombre[20];
         int id;
@@ -17,6 +19,9 @@ class Tabla
 
         char * toChar();
         void loadTabla(char*);
+
+        void printTabla();
+
 };
 
 #endif // TABLA_H

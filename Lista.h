@@ -7,9 +7,6 @@
 template<class clase>
 class Lista{
     public:
-        Nodo<clase>* head;
-        Nodo<clase>* tail;
-        int cant;
 
         void pushBack(clase d){
             Nodo<clase>* temp = new Nodo<clase>(d);
@@ -108,6 +105,11 @@ class Lista{
         };
 
     private:
+
+        Nodo<clase>* head;
+        Nodo<clase>* tail;
+        int cant;
+
         void pushManyBack(int x, clase d){
             for(int i = 0; i < x; i++)
                 pushBack(d);

@@ -13,8 +13,13 @@ class BloqueTabla : public Bloque{
         Lista<Tabla*> *tablas;
         int cantTablas;
 
+        bool addTabla(Tabla*);
+
         char * toChar();
         void load(char* data);
+
+        void write();
+        void read();
 };
 
 #endif // BLOQUETABLA_H

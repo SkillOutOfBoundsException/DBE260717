@@ -19,7 +19,7 @@ class Bloque{
         void load(char * data);
 
         void write();
-        void read(int n);
+        void read();
 };
 
 #endif // BLOQUE_H

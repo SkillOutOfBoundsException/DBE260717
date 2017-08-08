@@ -1,7 +1,8 @@
 #include "Bloque.h"
 
 Bloque::Bloque(int t){
-    sizeB = t;
+    num = t;
+    sizeB = 512;
     sig = -1;
     arch = new Archivo();
 }
@@ -35,9 +36,9 @@ void Bloque::write(){
     arch->close();
 }
 
-void Bloque::read(int n){
-    arch->open("r");
-    char * data = arch->read(n*sizeB, sizeB);
+void Bloque::read(){
+    arch->open("r+");
+    char * data = arch->read(num*sizeB, sizeB);
     load(data);
     arch->close();
 }

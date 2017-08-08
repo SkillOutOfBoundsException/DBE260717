@@ -1,7 +1,8 @@
 #include "Tabla.h"
 #define tablaSize 40 //tablaSize
 
-Tabla::Tabla(){
+Tabla::Tabla(int n){
+    id = n;
     primerBloqueCampo = -1;
     primerBloqueReg = -1;
     actualBloqueCampo = -1;
@@ -40,4 +41,13 @@ char* Tabla::toChar(){
     memcpy(&data[pos], &actualBloqueReg, 4);
     pos = pos + 4;
     return data;
+}
+
+void Tabla::printTabla(){
+    cout << "Tabla - " << nombre << endl;
+    cout << id << endl;
+    cout << primerBloqueCampo << endl;
+    cout << actualBloqueCampo << endl;
+    cout << primerBloqueReg << endl;
+    cout << actualBloqueReg << endl;
 }

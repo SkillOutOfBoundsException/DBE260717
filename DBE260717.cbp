@@ -48,6 +48,7 @@
 		<Unit filename="Nodo.h" />
 		<Unit filename="Tabla.cpp" />
 		<Unit filename="Tabla.h" />
+		<Unit filename="db.txt" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

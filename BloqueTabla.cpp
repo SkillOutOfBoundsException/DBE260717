@@ -5,6 +5,14 @@ BloqueTabla::BloqueTabla(int t) : Bloque(t){
     cantTablas = 0;
 }
 
+bool BloqueTabla::addTabla(Tabla * t){
+    if(cantTablas >= 10)
+        return false;
+    tablas->pushBack(t);
+    cantTablas++;
+    return true;
+}
+
 char * BloqueTabla::toChar(){
     int pos = 0;
     char * data = new char[sizeB];
@@ -34,9 +42,23 @@ void BloqueTabla::load(char * data){
     memcpy(&cantTablas, &data[pos], 4);
     pos = pos + 4;
     for(int i = 0; i < cantTablas; i++){
-        Tabla * t = new Tabla();
+        Tabla * t = new Tabla(i);
         t->loadTabla(&data[pos]);
         tablas->pushBack(t);
         pos = pos + tablaSize;
     }
+}
+
+void BloqueTabla::write(){
+    arch->open("r+");
+    char * data = toChar();
+    arch->write(data, num*sizeB, sizeB);
+    arch->close();
+}
+
+void BloqueTabla::read(){
+    arch->open("r");
+    char * data = arch->read(num*sizeB, sizeB);
+    load(data);
+    arch->close();
 }
