@@ -43,9 +43,8 @@ void BloqueTabla::load(char * data){
     pos = pos + 4;
     for(int i = 0; i < cantTablas; i++){
         Tabla * t = new Tabla(i);
-        char * d = new char(tablaSize);
-        memcpy(&d[0], &data[pos], tablaSize);
-        t->loadTabla(d);
+        t->loadTabla(&data[pos]);
+        t->printTabla();
         tablas->pushBack(t);
         pos = pos + tablaSize;
     }

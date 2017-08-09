@@ -11,7 +11,7 @@ class Tabla
     public:
         Tabla(int n);
 
-        char nombre[20];
+        char * nombre;
         int id;
         int primerBloqueCampo;
         int actualBloqueCampo;

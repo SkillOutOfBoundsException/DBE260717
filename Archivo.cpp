@@ -1,7 +1,7 @@
 #include "Archivo.h"
 
 Archivo::Archivo(){
-    myFile = fopen("db.txt", "r+");
+    //myFile = fopen("db.txt", "r+");
 }
 
 void Archivo::write(char * data, int pos, int length){
@@ -11,7 +11,7 @@ void Archivo::write(char * data, int pos, int length){
 
 char * Archivo::read(int pos, int length){
     fseek(myFile, pos, SEEK_SET);
-    char data[length];
+    char * data = new char[length];
     fread(data, 1, length, myFile);
     return data;
 }

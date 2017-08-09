@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1502140045 source:c:\users\diegu7\c++things\dbe260717\archivo.cpp
+1502226598 source:c:\users\diegu7\c++things\dbe260717\archivo.cpp
 	"Archivo.h"
 
 1501184457 c:\users\diegu7\c++things\dbe260717\archivo.h
@@ -28,13 +28,14 @@
 1488922731 source:c:\users\diegu7\c++things\dbe260717\nodo.cpp
 	"Nodo.h"
 
-1502141722 source:c:\users\diegu7\c++things\dbe260717\main.cpp
+1502227171 source:c:\users\diegu7\c++things\dbe260717\main.cpp
 	<iostream>
 	"Lista.h"
 	"Bloque.h"
 	"BloqueTabla.h"
 	"Archivo.h"
 	"BManager.h"
+	<stdio.h>
 
 1502154454 source:c:\users\diegu7-cb1\documents\c++\dbe260717\archivo.cpp
 	"Archivo.h"
@@ -85,7 +86,7 @@
 	"Archivo.h"
 	"Bloque.h"
 
-1502142388 source:c:\users\diegu7\c++things\dbe260717\bloquetabla.cpp
+1502226254 source:c:\users\diegu7\c++things\dbe260717\bloquetabla.cpp
 	"BloqueTabla.h"
 
 1502141182 c:\users\diegu7\c++things\dbe260717\bloquetabla.h
@@ -93,9 +94,10 @@
 	"Lista.h"
 	"Tabla.h"
 
-1502142370 c:\users\diegu7\c++things\dbe260717\tabla.h
+1502226049 c:\users\diegu7\c++things\dbe260717\tabla.h
 	<string.h>
 	<iostream>
+	<stdio.h>
 
 1501184457 source:c:\users\diegu7\c++things\dbe260717\bmanager.cpp
 	"BManager.h"
@@ -104,7 +106,7 @@
 	"Archivo.h"
 	"Bloque.h"
 
-1502142435 source:c:\users\diegu7\c++things\dbe260717\tabla.cpp
+1502227579 source:c:\users\diegu7\c++things\dbe260717\tabla.cpp
 	"Tabla.h"
 
 1502160472 source:c:\users\diegu7-cb1\documents\c++\dbe260717\bloquetabla.cpp
