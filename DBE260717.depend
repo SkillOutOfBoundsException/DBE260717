@@ -37,7 +37,7 @@
 	"BManager.h"
 	<stdio.h>
 
-1502154454 source:c:\users\diegu7-cb1\documents\c++\dbe260717\archivo.cpp
+1502237779 source:c:\users\diegu7-cb1\documents\c++\dbe260717\archivo.cpp
 	"Archivo.h"
 
 1501142020 c:\users\diegu7-cb1\documents\c++\dbe260717\archivo.h
@@ -63,13 +63,13 @@
 
 1501115148 c:\users\diegu7-cb1\documents\c++\dbe260717\nodo.h
 
-1502161500 source:c:\users\diegu7-cb1\documents\c++\dbe260717\main.cpp
+1502239791 source:c:\users\diegu7-cb1\documents\c++\dbe260717\main.cpp
 	<iostream>
 	"Lista.h"
 	"Bloque.h"
 	"BloqueTabla.h"
 	"Archivo.h"
-	"BManager.h"
+	<stdio.h>
 
 1501115148 source:c:\users\diegu7-cb1\documents\c++\dbe260717\nodo.cpp
 	"Nodo.h"
@@ -109,7 +109,7 @@
 1502227579 source:c:\users\diegu7\c++things\dbe260717\tabla.cpp
 	"Tabla.h"
 
-1502160472 source:c:\users\diegu7-cb1\documents\c++\dbe260717\bloquetabla.cpp
+1502237779 source:c:\users\diegu7-cb1\documents\c++\dbe260717\bloquetabla.cpp
 	"BloqueTabla.h"
 
 1502154454 c:\users\diegu7-cb1\documents\c++\dbe260717\bloquetabla.h
@@ -117,11 +117,11 @@
 	"Lista.h"
 	"Tabla.h"
 
-1502160783 c:\users\diegu7-cb1\documents\c++\dbe260717\tabla.h
+1502237779 c:\users\diegu7-cb1\documents\c++\dbe260717\tabla.h
 	<string.h>
 	<iostream>
 	<stdio.h>
 
-1502160906 source:c:\users\diegu7-cb1\documents\c++\dbe260717\tabla.cpp
+1502237779 source:c:\users\diegu7-cb1\documents\c++\dbe260717\tabla.cpp
 	"Tabla.h"
 

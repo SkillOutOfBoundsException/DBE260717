@@ -1,19 +1,19 @@
-#include "BloqueTabla.h"
+#include "BloqueCampo.h"
 
-BloqueTabla::BloqueTabla(int t) : Bloque(t){
-    tablas = new Lista<Tabla*>();
-    cantTablas = 0;
+BloqueCampo::BloqueCampo(){
+    campos = new Lista<Campo*>();
+    cantCampos = 0;
 }
 
-bool BloqueTabla::addTabla(Tabla * t){
-    if(cantTablas >= 10)
+bool BloqueCampo::addCampo(Campo * c){
+    if(cantTablas >= 16)
         return false;
-    tablas->pushBack(t);
-    cantTablas++;
+    campos->pushBack(c);
+    cantCampos++;
     return true;
 }
 
-char * BloqueTabla::toChar(){
+char * BloqueCampo::toChar(){
     int pos = 0;
     char * data = new char[sizeB];
     memcpy(&data[pos], &sizeB, 4);
@@ -22,16 +22,16 @@ char * BloqueTabla::toChar(){
     pos = pos + 4;
     memcpy(&data[pos], &sig, 4);
     pos = pos + 4;
-    memcpy(&data[pos], &cantTablas, 4);
+    memcpy(&data[pos], &cantCampos, 4);
     pos = pos + 4;
-    for(int i = 0; i < cantTablas; i++){
-        memcpy(&data[pos], tablas->index(i)->toChar(), tabla_size);
-        pos = pos + tabla_size;
+    for(int i = 0; i < cantCampos; i++){
+        memcpy(&data[pos], campos->index(i)->toChar(), campo_size);
+        pos = pos + campo_size;
     }
     return data;
 }
 
-void BloqueTabla::load(char * data){
+void BloqueCampo::load(char * data){
     int pos = 0;
     memcpy(&sizeB, &data[pos], 4);
     pos = pos + 4;
@@ -39,17 +39,17 @@ void BloqueTabla::load(char * data){
     pos = pos + 4;
     memcpy(&sig, &data[pos], 4);
     pos = pos + 4;
-    memcpy(&cantTablas, &data[pos], 4);
+    memcpy(&cantCampos, &data[pos], 4);
     pos = pos + 4;
-    for(int i = 0; i < cantTablas; i++){
-        Tabla * t = new Tabla(i);
-        t->loadTabla(&data[pos]);
-        tablas->pushBack(t);
-        pos = pos + tabla_size;
+    for(int i = 0; i < cantCampos; i++){
+        Campo * c = new Campo();
+        c->loadCampo(&data[pos]);
+        campos->pushBack(c);
+        pos = pos + campo_size;
     }
 }
 
-void BloqueTabla::write(){
+void BloqueCampo::write(){
     arch->open("r+");
     char * data = toChar();
     arch->write(data, num*sizeB, sizeB);

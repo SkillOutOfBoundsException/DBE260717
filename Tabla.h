@@ -3,11 +3,13 @@
 #include <string.h>
 #include <iostream>
 #include <stdio.h>
+#define tabla_size 40 //tablaSize
+#define int_size sizeof(int)
+#define str_size 20
 
 using namespace std;
 
-class Tabla
-{
+class Tabla{
     public:
         Tabla(int n);
 

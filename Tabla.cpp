@@ -1,5 +1,5 @@
 #include "Tabla.h"
-#define tablaSize 40 //tablaSize
+
 
 Tabla::Tabla(int n){
     id = n;
@@ -14,9 +14,9 @@ void Tabla::loadTabla(char * data){
     int pos = 0;
     memcpy(&nombre[0], &data[pos], 20);
     pos = pos + 20;
-    memcpy(&id, &data[20], 4);
+    memcpy(&id, &data[pos], 4);
     pos = pos + 4;
-    memcpy(&primerBloqueCampo, &data[24], 4);
+    memcpy(&primerBloqueCampo, &data[pos], 4);
     pos = pos + 4;
     memcpy(&actualBloqueCampo, &data[pos], 4);
     pos = pos + 4;
@@ -27,7 +27,7 @@ void Tabla::loadTabla(char * data){
 }
 
 char* Tabla::toChar(){
-    char * data = new char[tablaSize];
+    char * data = new char[tabla_size];
     int pos = 0;
     memcpy(&data[pos], &nombre[0], 20);
     pos = pos + 20;

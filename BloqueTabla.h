@@ -3,7 +3,9 @@
 #include "Bloque.h"
 #include "Lista.h"
 #include "Tabla.h"
-#define tablaSize 40 //tabla size
+#define tabla_size 40 //tabla size
+#define int_size sizeof(int)
+#define str_size 20
 
 
 class BloqueTabla : public Bloque{

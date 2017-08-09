@@ -3,6 +3,8 @@
 #include <string.h>
 #include <iostream>
 #include "Archivo.h"
+#define int_size sizeof(int)
+#define str_size 20
 
 using namespace std;
 

@@ -1,0 +1,20 @@
+#ifndef CAMPO_H
+#define CAMPO_H
+#define campo_size 28
+#define int_size sizeof(int)
+#define str_size 20
+
+
+class Campo
+{
+    public:
+        Campo();
+        char * nombre;
+        int tipo;
+        int regSize;
+
+        char * toChar();
+        void loadCampo(char *);
+};
+
+#endif // CAMPO_H
