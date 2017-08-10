@@ -10,8 +10,8 @@
 class BloqueCampo : public Bloque{
 
     public:
-        BloqueCampo();
-        Lista<Campo*> campos;
+        BloqueCampo(int t);
+        Lista<Campo*> * campos;
         int cantCampos;
 
         bool addCampo(Campo*);

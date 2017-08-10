@@ -14,8 +14,6 @@ void Campo::loadCampo(char* data){
     pos = pos + 4;
     memcpy(&regSize, &data[pos], 4);
     pos = pos + 4;
-    memcpy(&actualBloqueCampo, &data[pos], 4);
-    pos = pos + 4;
 }
 
 char * Campo::toChar(){

@@ -1,12 +1,12 @@
 #include "BloqueCampo.h"
 
-BloqueCampo::BloqueCampo(){
+BloqueCampo::BloqueCampo(int t) : Bloque(t){
     campos = new Lista<Campo*>();
     cantCampos = 0;
 }
 
 bool BloqueCampo::addCampo(Campo * c){
-    if(cantTablas >= 16)
+    if(cantCampos >= 16)
         return false;
     campos->pushBack(c);
     cantCampos++;
@@ -56,7 +56,7 @@ void BloqueCampo::write(){
     arch->close();
 }
 
-void BloqueTabla::read(){
+void BloqueCampo::read(){
     arch->open("r");
     char * data = arch->read(num*sizeB, sizeB);
     load(data);

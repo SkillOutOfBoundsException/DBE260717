@@ -1,7 +1,6 @@
 #include "Archivo.h"
 
 Archivo::Archivo(){
-    //myFile = fopen("db.txt", "r+");
 }
 
 void Archivo::write(char * data, int pos, int length){

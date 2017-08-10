@@ -1,12 +1,17 @@
 #ifndef CAMPO_H
 #define CAMPO_H
+#include <string.h>
+#include <iostream>
+#include <stdio.h>
 #define campo_size 28
 #define int_size sizeof(int)
 #define str_size 20
 
+using namespace std;
 
-class Campo
-{
+
+class Campo{
+
     public:
         Campo();
         char * nombre;
