@@ -11,6 +11,8 @@ class BloqueMaster : public Bloque{
         BloqueMaster();
         int primerBloqueTabla;
         int actualBloqueTabla;
+        int cantTablas;
+        int cantBloqueTabla;
 
         char * toChar();
         void load(char*);

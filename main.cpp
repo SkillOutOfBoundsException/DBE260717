@@ -2,7 +2,10 @@
 #include "Lista.h"
 #include "Bloque.h"
 #include "BloqueTabla.h"
+#include "BloqueMaster.h"
+#include "BloqueCampo.h"
 #include "Archivo.h"
+#include "Engine.h"
 #include <stdio.h>
 
 
@@ -11,14 +14,10 @@ using namespace std;
 
 int main(){
 
-    Bloque * b = new Bloque(0);
-    BloqueTabla * bt = new BloqueTabla(1);
+    Engine * e = new Engine();
 
-    b->read();
-    bt->read();
 
-    bt->tablas->index(0)->printTabla();
-
+    e->printTablas();
 
     return 0;
 }
