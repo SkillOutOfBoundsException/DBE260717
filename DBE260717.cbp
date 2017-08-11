@@ -42,10 +42,14 @@
 		<Unit filename="Bloque.h" />
 		<Unit filename="BloqueCampo.cpp" />
 		<Unit filename="BloqueCampo.h" />
+		<Unit filename="BloqueMaster.cpp" />
+		<Unit filename="BloqueMaster.h" />
 		<Unit filename="BloqueTabla.cpp" />
 		<Unit filename="BloqueTabla.h" />
 		<Unit filename="Campo.cpp" />
 		<Unit filename="Campo.h" />
+		<Unit filename="Engine.cpp" />
+		<Unit filename="Engine.h" />
 		<Unit filename="Lista.cpp" />
 		<Unit filename="Lista.h" />
 		<Unit filename="Nodo.cpp" />

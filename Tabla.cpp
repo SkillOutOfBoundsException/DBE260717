@@ -44,11 +44,15 @@ char* Tabla::toChar(){
     return data;
 }
 
+void Tabla::setNombre(char* n){
+    memcpy(&nombre[0], &n[0], 20);
+}
+
 void Tabla::printTabla(){
     cout << "Tabla - " << nombre << endl;
     cout << id << endl;
-    cout << primerBloqueCampo << endl;
-    cout << actualBloqueCampo << endl;
-    cout << primerBloqueReg << endl;
-    cout << actualBloqueReg << endl;
+    //cout << primerBloqueCampo << endl;
+    //cout << actualBloqueCampo << endl;
+    //cout << primerBloqueReg << endl;
+    //cout << actualBloqueReg << endl;
 }

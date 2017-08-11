@@ -84,6 +84,10 @@ class Lista{
             cant = 0;
         };
 
+        int length(){
+            return cant;
+        }
+
         Lista(){
             head = 0;
             tail = 0;

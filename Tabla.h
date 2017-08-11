@@ -23,6 +23,7 @@ class Tabla{
         char * toChar();
         void loadTabla(char*);
 
+        void setNombre(char*);
         void printTabla();
 
 };
