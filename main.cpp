@@ -16,9 +16,6 @@ int main(){
 
     Engine * e = new Engine();
 
-
-    e->printTablas();
-
     return 0;
 }
 

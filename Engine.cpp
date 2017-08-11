@@ -10,6 +10,11 @@ void Engine::load(){
     bm->read();
 }
 
+void Engine::format(){
+    bm = new BloqueMaster();
+    bm->write();
+}
+
 void Engine::addTabla(char* nombre, int cantCampos){
     Tabla * t = new Tabla(bm->cantTablas);
     t->setNombre(nombre);

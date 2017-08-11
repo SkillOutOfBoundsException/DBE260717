@@ -14,6 +14,7 @@ class Engine{
         BloqueMaster * bm;
         Lista<Tabla*> * tablas;
 
+        void format();
         void load();
         void addTabla(char* nombre, int cantCampos);
 

@@ -125,7 +125,7 @@
 	<iostream>
 	<stdio.h>
 
-1502466360 source:c:\users\diegu7-cb1\documents\c++\dbe260717\tabla.cpp
+1502468444 source:c:\users\diegu7-cb1\documents\c++\dbe260717\tabla.cpp
 	"Tabla.h"
 
 1502413711 source:c:\users\diegu7-cb1\documents\c++\dbe260717\bloquecampo.cpp
@@ -150,10 +150,10 @@
 1502413711 source:c:\users\diegu7-cb1\documents\c++\dbe260717\campo.cpp
 	"Campo.h"
 
-1502468065 source:c:\users\diegu7-cb1\documents\c++\dbe260717\engine.cpp
+1502469735 source:c:\users\diegu7-cb1\documents\c++\dbe260717\engine.cpp
 	"Engine.h"
 
-1502468000 c:\users\diegu7-cb1\documents\c++\dbe260717\engine.h
+1502469690 c:\users\diegu7-cb1\documents\c++\dbe260717\engine.h
 	"BloqueMaster.h"
 	"BloqueTabla.h"
 	"Lista.h"
