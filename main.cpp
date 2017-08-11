@@ -2,6 +2,8 @@
 #include "Lista.h"
 #include "Bloque.h"
 #include "BloqueTabla.h"
+#include "BloqueMaster.h"
+#include "Engine.h"
 #include "Archivo.h"
 #include <stdio.h>
 

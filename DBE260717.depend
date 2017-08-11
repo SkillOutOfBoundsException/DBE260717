@@ -18,7 +18,7 @@
 1488924860 source:c:\users\diegu7\c++things\dbe260717\lista.cpp
 	"Lista.h"
 
-1502141429 c:\users\diegu7\c++things\dbe260717\lista.h
+1502471426 c:\users\diegu7\c++things\dbe260717\lista.h
 	"Nodo.h"
 	<stdexcept>
 	<iostream>
@@ -96,7 +96,7 @@
 	"Lista.h"
 	"Tabla.h"
 
-1502307873 c:\users\diegu7\c++things\dbe260717\tabla.h
+1502471426 c:\users\diegu7\c++things\dbe260717\tabla.h
 	<string.h>
 	<iostream>
 	<stdio.h>
@@ -171,12 +171,21 @@
 	<iostream>
 	<stdio.h>
 
-1502400905 source:c:\users\diegu7\c++things\dbe260717\bloquemaster.cpp
+1502471426 source:c:\users\diegu7\c++things\dbe260717\bloquemaster.cpp
 	"BloqueMaster.h"
 
-1502400888 c:\users\diegu7\c++things\dbe260717\bloquemaster.h
+1502471426 c:\users\diegu7\c++things\dbe260717\bloquemaster.h
 	"Bloque.h"
 
 1502401449 source:c:\users\diegu7\c++things\dbe260717\campo.cpp
 	"Campo.h"
+
+1502471426 source:c:\users\diegu7\c++things\dbe260717\engine.cpp
+	"Engine.h"
+
+1502471426 c:\users\diegu7\c++things\dbe260717\engine.h
+	"BloqueMaster.h"
+	"BloqueTabla.h"
+	"Lista.h"
+	"Tabla.h"
 
