@@ -6,6 +6,7 @@ BloqueMaster::BloqueMaster() : Bloque(0){
     actualBloqueTabla = -1;
     cantTablas = 0;
     cantBloqueTabla = 1;
+    cantBloques = 1;
 }
 
 char * BloqueMaster::toChar(){
@@ -25,6 +26,8 @@ char * BloqueMaster::toChar(){
     pos = pos + 4;
     memcpy(&data[pos], &cantBloqueTabla, 4);
     pos = pos + 4;
+    memcpy(&data[pos], &cantBloques, 4);
+    pos = pos + 4;
     return data;
 }
 
@@ -43,6 +46,8 @@ void BloqueMaster::load(char * data){
     memcpy(&cantTablas, &data[pos], 4);
     pos = pos + 4;
     memcpy(&cantBloqueTabla, &data[pos], 4);
+    pos = pos + 4;
+    memcpy(&cantBloques, &data[pos], 4);
     pos = pos + 4;
 }
 

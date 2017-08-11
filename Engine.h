@@ -9,6 +9,7 @@
 
 
 class Engine{
+
     public:
         Engine();
         BloqueMaster * bm;
@@ -16,7 +17,11 @@ class Engine{
 
         void format();
         void load();
-        void addTabla(char* nombre, int cantCampos);
+        void addTabla(char*);
+
+        Tabla * searchTabla(int id);
+        BloqueTabla * searchBloqueTabla(int id);
+        void addCampoToTabla(int idTabla, char * nombre, int tipo);
 
         void loadTablas();
         void printTablas();

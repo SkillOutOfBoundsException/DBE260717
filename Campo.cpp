@@ -6,6 +6,12 @@ Campo::Campo(){
     regSize = 4;
 }
 
+void Campo::setAttributes(char * n, int t){
+    memcpy(&nombre[0], &n[0], 20);
+    tipo = t;
+    regSize = t == 1 ? 20 : 4;
+}
+
 void Campo::loadCampo(char* data){
     int pos = 0;
     memcpy(&nombre[0], &data[pos], 20);
@@ -26,4 +32,13 @@ char * Campo::toChar(){
     memcpy(&data[pos], &regSize, 4);
     pos = pos + 4;
     return data;
+}
+
+void Campo::printCampo(){
+    char * t = new char[10];
+    if(tipo == 1)
+        memcpy(&t[0], "STRING" , 10);
+    else
+        memcpy(&t[0], "INT" , 10);
+    cout << "->" <<nombre << " - " << t << " - size: " << regSize << endl;
 }
