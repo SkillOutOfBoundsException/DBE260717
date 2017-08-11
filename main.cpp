@@ -21,8 +21,13 @@ int main(){
     }
     */
 
+    /*
+    for(int k = 0; k < 20; k++){
+        e->addCampoToTabla(7, "RegistroTemp", 1);
+    }
+    */
 
-    e->addCampoToTabla(7, "RegistroTemp", 1);
+    e->printTablas();
 
     return 0;
 }
