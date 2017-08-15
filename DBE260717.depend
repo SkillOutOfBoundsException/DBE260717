@@ -64,12 +64,14 @@
 
 1501115148 c:\users\diegu7-cb1\documents\c++\dbe260717\nodo.h
 
-1502759245 source:c:\users\diegu7-cb1\documents\c++\dbe260717\main.cpp
+1502771710 source:c:\users\diegu7-cb1\documents\c++\dbe260717\main.cpp
 	<iostream>
 	"Lista.h"
 	"Bloque.h"
 	"BloqueTabla.h"
 	"BloqueMaster.h"
+	"BloqueCampo.h"
+	"Campo.h"
 	"Engine.h"
 	"Archivo.h"
 	<stdio.h>
@@ -116,10 +118,10 @@
 1502482055 source:c:\users\diegu7\c++things\dbe260717\tabla.cpp
 	"Tabla.h"
 
-1502759120 source:c:\users\diegu7-cb1\documents\c++\dbe260717\bloquetabla.cpp
+1502770649 source:c:\users\diegu7-cb1\documents\c++\dbe260717\bloquetabla.cpp
 	"BloqueTabla.h"
 
-1502759120 c:\users\diegu7-cb1\documents\c++\dbe260717\bloquetabla.h
+1502763722 c:\users\diegu7-cb1\documents\c++\dbe260717\bloquetabla.h
 	"Bloque.h"
 	"Lista.h"
 	"Tabla.h"
@@ -133,13 +135,13 @@
 	"BloqueMaster.h"
 	"BloqueCampo.h"
 
-1502759120 source:c:\users\diegu7-cb1\documents\c++\dbe260717\tabla.cpp
+1502771496 source:c:\users\diegu7-cb1\documents\c++\dbe260717\tabla.cpp
 	"Tabla.h"
 
-1502413711 source:c:\users\diegu7-cb1\documents\c++\dbe260717\bloquecampo.cpp
+1502770750 source:c:\users\diegu7-cb1\documents\c++\dbe260717\bloquecampo.cpp
 	"BloqueCampo.h"
 
-1502413711 c:\users\diegu7-cb1\documents\c++\dbe260717\bloquecampo.h
+1502770588 c:\users\diegu7-cb1\documents\c++\dbe260717\bloquecampo.h
 	"Bloque.h"
 	"Campo.h"
 	"Lista.h"
@@ -149,19 +151,21 @@
 	<iostream>
 	<stdio.h>
 
-1502759120 source:c:\users\diegu7-cb1\documents\c++\dbe260717\bloquemaster.cpp
+1502762542 source:c:\users\diegu7-cb1\documents\c++\dbe260717\bloquemaster.cpp
 	"BloqueMaster.h"
 
-1502759120 c:\users\diegu7-cb1\documents\c++\dbe260717\bloquemaster.h
+1502762438 c:\users\diegu7-cb1\documents\c++\dbe260717\bloquemaster.h
 	"Bloque.h"
+	<string.h>
+	<iostream>
 
-1502759120 source:c:\users\diegu7-cb1\documents\c++\dbe260717\campo.cpp
+1502771507 source:c:\users\diegu7-cb1\documents\c++\dbe260717\campo.cpp
 	"Campo.h"
 
-1502759120 source:c:\users\diegu7-cb1\documents\c++\dbe260717\engine.cpp
+1502763973 source:c:\users\diegu7-cb1\documents\c++\dbe260717\engine.cpp
 	"Engine.h"
 
-1502759352 c:\users\diegu7-cb1\documents\c++\dbe260717\engine.h
+1502762008 c:\users\diegu7-cb1\documents\c++\dbe260717\engine.h
 	"BloqueMaster.h"
 	"BloqueTabla.h"
 	"Lista.h"
