@@ -6,7 +6,7 @@ BloqueTabla::BloqueTabla(int t) : Bloque(t){
 }
 
 bool BloqueTabla::addTabla(Tabla * t){
-    if(cantTablas >= 10)
+    if(cantTablas >= 8)
         return false;
     tablas->pushBack(t);
     cantTablas++;

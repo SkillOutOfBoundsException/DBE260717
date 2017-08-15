@@ -13,6 +13,7 @@ class BloqueMaster : public Bloque{
         int actualBloqueTabla;
         int cantTablas;
         int cantBloqueTabla;
+        int cantBloques;
 
         char * toChar();
         void load(char*);

@@ -20,6 +20,11 @@ class Campo{
 
         char * toChar();
         void loadCampo(char *);
+
+        void setAttributes(char * n, int t);
+        void printCampo();
+
+
 };
 
 #endif // CAMPO_H
