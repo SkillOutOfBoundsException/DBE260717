@@ -96,7 +96,8 @@ char* Tabla::toChar(){
 }
 
 void Tabla::setNombre(char* n){
-    memcpy(&nombre[0], &n[0], 20);
+    memset(nombre, 0, 20);
+    memcpy(&nombre[0], &n[0], strlen(n));
 }
 
 void Tabla::loadCampos(){
@@ -113,17 +114,17 @@ void Tabla::loadCampos(){
 
 void Tabla::printTabla(){
     loadCampos();
-
     cout << "Tabla - " << nombre << endl;
-    cout << "ID - " << id << endl;
+    cout << "ID - " << id << " - ";
     cout << cantCampos << " Campo(s): " << endl;
     for(int i = 0; i < cantCampos; i ++){
         campos->index(i)->printCampo();
     }
-    cout << "------------------------" << endl;
 
-    //cout << primerBloqueCampo << endl;
-    //cout << actualBloqueCampo << endl;
+    cout << primerBloqueCampo << endl;
+    cout << actualBloqueCampo << endl;
     //cout << primerBloqueReg << endl;
     //cout << actualBloqueReg << endl;
+
+    cout << "------------------------" << endl;
 }
