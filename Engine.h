@@ -19,6 +19,10 @@ class Engine{
         void format();
         void load();
         void addTabla(char* nombre);
+        void addCampoToTabla(int idTabla, char * nombre, int tipo);
+
+        Tabla * searchTabla(int id);
+        BloqueTabla * searchBloqueTabla(int id);
 
         void loadTablas();
         void printTablas();

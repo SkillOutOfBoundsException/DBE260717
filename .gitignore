@@ -81,3 +81,7 @@ $RECYCLE.BIN/
 #CodeBlocks
 *.depend
 *.layout
+
+#Proyect
+*.txt
+main.cpp

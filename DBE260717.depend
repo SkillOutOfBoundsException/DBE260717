@@ -38,10 +38,10 @@
 	"Archivo.h"
 	<stdio.h>
 
-1502413711 source:c:\users\diegu7-cb1\documents\c++\dbe260717\archivo.cpp
+1502759119 source:c:\users\diegu7-cb1\documents\c++\dbe260717\archivo.cpp
 	"Archivo.h"
 
-1501142020 c:\users\diegu7-cb1\documents\c++\dbe260717\archivo.h
+1502759119 c:\users\diegu7-cb1\documents\c++\dbe260717\archivo.h
 	<stdio.h>
 	<string.h>
 	<iostream>
@@ -64,15 +64,14 @@
 
 1501115148 c:\users\diegu7-cb1\documents\c++\dbe260717\nodo.h
 
-1502468276 source:c:\users\diegu7-cb1\documents\c++\dbe260717\main.cpp
+1502759245 source:c:\users\diegu7-cb1\documents\c++\dbe260717\main.cpp
 	<iostream>
 	"Lista.h"
 	"Bloque.h"
 	"BloqueTabla.h"
 	"BloqueMaster.h"
-	"BloqueCampo.h"
-	"Archivo.h"
 	"Engine.h"
+	"Archivo.h"
 	<stdio.h>
 
 1501115148 source:c:\users\diegu7-cb1\documents\c++\dbe260717\nodo.cpp
@@ -117,20 +116,24 @@
 1502482055 source:c:\users\diegu7\c++things\dbe260717\tabla.cpp
 	"Tabla.h"
 
-1502241604 source:c:\users\diegu7-cb1\documents\c++\dbe260717\bloquetabla.cpp
+1502759120 source:c:\users\diegu7-cb1\documents\c++\dbe260717\bloquetabla.cpp
 	"BloqueTabla.h"
 
-1502242086 c:\users\diegu7-cb1\documents\c++\dbe260717\bloquetabla.h
+1502759120 c:\users\diegu7-cb1\documents\c++\dbe260717\bloquetabla.h
 	"Bloque.h"
 	"Lista.h"
 	"Tabla.h"
 
-1502466308 c:\users\diegu7-cb1\documents\c++\dbe260717\tabla.h
+1502759120 c:\users\diegu7-cb1\documents\c++\dbe260717\tabla.h
 	<string.h>
 	<iostream>
 	<stdio.h>
+	"Lista.h"
+	"Campo.h"
+	"BloqueMaster.h"
+	"BloqueCampo.h"
 
-1502468444 source:c:\users\diegu7-cb1\documents\c++\dbe260717\tabla.cpp
+1502759120 source:c:\users\diegu7-cb1\documents\c++\dbe260717\tabla.cpp
 	"Tabla.h"
 
 1502413711 source:c:\users\diegu7-cb1\documents\c++\dbe260717\bloquecampo.cpp
@@ -141,28 +144,29 @@
 	"Campo.h"
 	"Lista.h"
 
-1502413711 c:\users\diegu7-cb1\documents\c++\dbe260717\campo.h
+1502759120 c:\users\diegu7-cb1\documents\c++\dbe260717\campo.h
 	<string.h>
 	<iostream>
 	<stdio.h>
 
-1502466713 source:c:\users\diegu7-cb1\documents\c++\dbe260717\bloquemaster.cpp
+1502759120 source:c:\users\diegu7-cb1\documents\c++\dbe260717\bloquemaster.cpp
 	"BloqueMaster.h"
 
-1502466600 c:\users\diegu7-cb1\documents\c++\dbe260717\bloquemaster.h
+1502759120 c:\users\diegu7-cb1\documents\c++\dbe260717\bloquemaster.h
 	"Bloque.h"
 
-1502413711 source:c:\users\diegu7-cb1\documents\c++\dbe260717\campo.cpp
+1502759120 source:c:\users\diegu7-cb1\documents\c++\dbe260717\campo.cpp
 	"Campo.h"
 
-1502469735 source:c:\users\diegu7-cb1\documents\c++\dbe260717\engine.cpp
+1502759120 source:c:\users\diegu7-cb1\documents\c++\dbe260717\engine.cpp
 	"Engine.h"
 
-1502469690 c:\users\diegu7-cb1\documents\c++\dbe260717\engine.h
+1502759352 c:\users\diegu7-cb1\documents\c++\dbe260717\engine.h
 	"BloqueMaster.h"
 	"BloqueTabla.h"
 	"Lista.h"
 	"Tabla.h"
+	"Archivo.h"
 
 1502400852 source:c:\users\diegu7\c++things\dbe260717\bloquecampo.cpp
 	"BloqueCampo.h"
