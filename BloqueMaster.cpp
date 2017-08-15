@@ -5,7 +5,7 @@ BloqueMaster::BloqueMaster() : Bloque(0){
     primerBloqueTabla = -1;
     actualBloqueTabla = -1;
     cantTablas = 0;
-    cantBloqueTabla = 1;
+    cantBloqueTabla = 0;
     cantBloques = 1;
 }
 
@@ -63,4 +63,11 @@ void BloqueMaster::read(){
     char * data = arch->read(num*sizeB, sizeB);
     load(data);
     arch->close();
+}
+
+void BloqueMaster::printSelf(){
+    cout << "Acutal Bloque Tabla - " << actualBloqueTabla << endl;
+    cout << "Cant Bloque Tabla - " << cantBloqueTabla << endl;
+    cout << "Cant Bloques - " << cantBloques << endl;
+    cout << "Cant Tablas - " << cantTablas << endl;
 }

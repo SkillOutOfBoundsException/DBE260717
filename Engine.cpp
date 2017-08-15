@@ -56,8 +56,9 @@ void Engine::addCampoToTabla(int idTabla, char * nombre, int tipo){
     BloqueTabla * bt = searchBloqueTabla(idTabla);
     if(bt == 0){
         cout << "tabla not found" << endl;
+        return;
     }
-    Tabla * t;
+    Tabla * t = 0;
     for(int i = 0; i < bt->cantTablas; i++){
         Tabla * temp = bt->tablas->index(i);
         if(idTabla == temp->id){
@@ -109,5 +110,17 @@ void Engine::printTablas(){
     loadTablas();
     for(int i = 0; i < bm->cantTablas; i++){
         tablas->index(i)->printTabla();
+    }
+}
+
+void Engine::printBloques(){
+    bm->printSelf();
+    cout << "------------------------" << endl;
+    int i = bm->primerBloqueTabla;
+    while(i != -1){
+        BloqueTabla * bt = new BloqueTabla(i);
+        bt->read();
+        bt->printBloque();
+        i = bt->sig;
     }
 }

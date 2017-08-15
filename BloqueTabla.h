@@ -22,6 +22,8 @@ class BloqueTabla : public Bloque{
 
         void write();
         void read();
+
+        void printBloque();
 };
 
 #endif // BLOQUETABLA_H

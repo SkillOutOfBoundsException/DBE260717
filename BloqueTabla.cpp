@@ -62,3 +62,10 @@ void BloqueTabla::read(){
     load(data);
     arch->close();
 }
+
+void BloqueTabla::printBloque(){
+    cout << "Bloque num " << num << endl;
+    cout << "Num de tablas " << cantTablas << endl;
+    cout << "Sig " << sig << endl;
+    cout << "------------------------" << endl;
+}

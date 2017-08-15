@@ -26,6 +26,7 @@ class Engine{
 
         void loadTablas();
         void printTablas();
+        void printBloques();
 
 };
 

@@ -7,7 +7,8 @@ Campo::Campo(){
 }
 
 void Campo::setAttributes(char * n, int t){
-    memcpy(&nombre[0], &n[0], 20);
+    memset(nombre, 0, 20);
+    memcpy(&nombre[0], &n[0], strlen(n));
     tipo = t;
     regSize = t == 1 ? 20 : 4;
 }

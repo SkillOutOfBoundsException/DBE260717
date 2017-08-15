@@ -62,3 +62,10 @@ void BloqueCampo::read(){
     load(data);
     arch->close();
 }
+
+void BloqueCampo::printBloque(){
+    cout << "Bloque num " << num << endl;
+    cout << "Num de campos " << cantCampos << endl;
+    cout << "Sig " << sig << endl;
+    cout << "------------------------" << endl;
+}

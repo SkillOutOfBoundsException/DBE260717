@@ -1,8 +1,12 @@
 #ifndef BLOQUEMASTER_H
 #define BLOQUEMASTER_H
 #include "Bloque.h"
+#include <string.h>
+#include <iostream>
 #define int_size sizeof(int)
 #define str_size 20
+
+using namespace std;
 
 class BloqueMaster : public Bloque{
 
@@ -20,6 +24,8 @@ class BloqueMaster : public Bloque{
 
         void write();
         void read();
+
+        void printSelf();
 };
 
 #endif // BLOQUEMASTER_H

@@ -3,6 +3,8 @@
 #include "Bloque.h"
 #include "BloqueTabla.h"
 #include "BloqueMaster.h"
+#include "BloqueCampo.h"
+#include "Campo.h"
 #include "Engine.h"
 #include "Archivo.h"
 #include <stdio.h>
@@ -13,21 +15,22 @@ using namespace std;
 
 int main(){
 
+
     Engine * e = new Engine();
 
-    /*
-    for(int i = 0; i < 20; i++){
-        e->addTabla("TablaTemp");
-    }
-    */
+    e->addCampoToTabla(2, "noob", 0);
 
-    /*
-    for(int k = 0; k < 20; k++){
-        e->addCampoToTabla(7, "RegistroTemp", 1);
-    }
-    */
+    //e->addTabla("trois");
 
     e->printTablas();
+
+
+
+
+
+
+
+
 
     return 0;
 }
