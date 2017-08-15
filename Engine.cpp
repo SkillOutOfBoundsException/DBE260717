@@ -1,13 +1,20 @@
 #include "Engine.h"
 
 Engine::Engine(){
+    arch = new Archivo();
     bm = new BloqueMaster();
     tablas = new Lista<Tabla*>();
     load();
 }
 
 void Engine::load(){
-    bm->read();
+    if(arch->exists()){
+        bm->read();
+        return;
+    }
+    arch->open("w");
+    arch->close();
+    bm->write();
 }
 
 void Engine::format(){
@@ -15,7 +22,7 @@ void Engine::format(){
     bm->write();
 }
 
-void Engine::addTabla(char* nombre, int cantCampos){
+void Engine::addTabla(char* nombre){
     Tabla * t = new Tabla(bm->cantTablas);
     t->setNombre(nombre);
     bm->cantTablas++;

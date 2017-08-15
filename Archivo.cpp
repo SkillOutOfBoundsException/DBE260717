@@ -23,3 +23,10 @@ void Archivo::open(char * mode){
     myFile = fopen("db.txt", mode);
 }
 
+bool Archivo::exists(){
+    if(myFile = fopen("db.txt", "r")){
+        close();
+        return true;
+    }
+    return false;
+}

@@ -16,6 +16,7 @@ class Archivo
         void close();
         void write(char * data, int pos = 0, int length = 0);
         char * read(int pos, int length);
+        bool exists();
 
 
 };
