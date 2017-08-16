@@ -18,6 +18,8 @@ char * BloqueMaster::toChar(){
     pos = pos + 4;
     memcpy(&data[pos], &sig, 4);
     pos = pos + 4;
+    memcpy(&data[pos], &cantBloques, 4);
+    pos = pos + 4;
     memcpy(&data[pos], &primerBloqueTabla, 4);
     pos = pos + 4;
     memcpy(&data[pos], &actualBloqueTabla, 4);
@@ -25,8 +27,6 @@ char * BloqueMaster::toChar(){
     memcpy(&data[pos], &cantTablas, 4);
     pos = pos + 4;
     memcpy(&data[pos], &cantBloqueTabla, 4);
-    pos = pos + 4;
-    memcpy(&data[pos], &cantBloques, 4);
     pos = pos + 4;
     return data;
 }
@@ -39,6 +39,8 @@ void BloqueMaster::load(char * data){
     pos = pos + 4;
     memcpy(&sig, &data[pos], 4);
     pos = pos + 4;
+    memcpy(&cantBloques, &data[pos], 4);
+    pos = pos + 4;
     memcpy(&primerBloqueTabla, &data[pos], 4);
     pos = pos + 4;
     memcpy(&actualBloqueTabla, &data[pos], 4);
@@ -47,8 +49,7 @@ void BloqueMaster::load(char * data){
     pos = pos + 4;
     memcpy(&cantBloqueTabla, &data[pos], 4);
     pos = pos + 4;
-    memcpy(&cantBloques, &data[pos], 4);
-    pos = pos + 4;
+
 }
 
 void BloqueMaster::write(){
@@ -56,6 +57,7 @@ void BloqueMaster::write(){
     char * data = toChar();
     arch->write(data, num*sizeB, sizeB);
     arch->close();
+    read();
 }
 
 void BloqueMaster::read(){

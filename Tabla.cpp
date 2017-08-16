@@ -102,6 +102,9 @@ void Tabla::setNombre(char* n){
 
 void Tabla::loadCampos(){
     campos->clearList();
+    if(primerBloqueCampo == -1){
+        return;
+    }
     int i = primerBloqueCampo;
     while(i != -1){
         BloqueCampo * bc = new BloqueCampo(i);

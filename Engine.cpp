@@ -96,6 +96,10 @@ Tabla * Engine::searchTabla(int id){
 
 void Engine::loadTablas(){
     tablas->clearList();
+    if(bm->primerBloqueTabla == -1){
+        cout << "No hay tablas" << endl;
+        return;
+    }
     int i = bm->primerBloqueTabla;
     while(i != -1){
         BloqueTabla * bt = new BloqueTabla(i);

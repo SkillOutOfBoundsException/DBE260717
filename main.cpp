@@ -15,14 +15,22 @@ using namespace std;
 
 int main(){
 
+    Archivo * a = new Archivo();
 
     Engine * e = new Engine();
 
-    e->addCampoToTabla(2, "noob", 0);
+    //e->addCampoToTabla(2, "noob", 0);
+    for(int i = 0; i < 30; i++){
+        e->bm->cantBloques++;
+        e->bm->write();
+        cout << e->bm->cantBloques << endl;
+    }
 
-    //e->addTabla("trois");
+    //e->bm->read();
 
-    e->printTablas();
+    //e->bm->printSelf();
+
+    //e->bm->printSelf();
 
 
 
