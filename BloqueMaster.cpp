@@ -57,7 +57,6 @@ void BloqueMaster::write(){
     char * data = toChar();
     arch->write(data, num*sizeB, sizeB);
     arch->close();
-    read();
 }
 
 void BloqueMaster::read(){

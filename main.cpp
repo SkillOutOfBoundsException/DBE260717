@@ -15,24 +15,19 @@ using namespace std;
 
 int main(){
 
-    Archivo * a = new Archivo();
 
-    //Engine * e = new Engine();
-
-    BloqueMaster * bm = new BloqueMaster();
+    Engine * e = new Engine();
 
     //e->addCampoToTabla(2, "noob", 0);
-    for(int i = 0; i < 30; i++){
-        bm->cantBloques++;
-        bm->write();
-        cout << bm->cantBloques << endl;
-    }
+    /*for(int i = 0; i < 500; i++){
+        for(int k = 0; k < 100; k++){
+            e->addCampoToTabla(i, "kekistan", 1);
+        }
+    }*/
 
-    //e->bm->read();
+    e->printTablas();
 
-    //e->bm->printSelf();
 
-    //e->bm->printSelf();
 
 
 
