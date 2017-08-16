@@ -50,14 +50,14 @@ void BloqueCampo::load(char * data){
 }
 
 void BloqueCampo::write(){
-    arch->open("r+");
+    arch->open("rb+");
     char * data = toChar();
     arch->write(data, num*sizeB, sizeB);
     arch->close();
 }
 
 void BloqueCampo::read(){
-    arch->open("r");
+    arch->open("rb");
     char * data = arch->read(num*sizeB, sizeB);
     load(data);
     arch->close();

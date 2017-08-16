@@ -53,7 +53,7 @@ void BloqueMaster::load(char * data){
 }
 
 void BloqueMaster::write(){
-    arch->open("r+");
+    arch->open("rb+");
     char * data = toChar();
     arch->write(data, num*sizeB, sizeB);
     arch->close();
@@ -61,7 +61,7 @@ void BloqueMaster::write(){
 }
 
 void BloqueMaster::read(){
-    arch->open("r+");
+    arch->open("rb+");
     char * data = arch->read(num*sizeB, sizeB);
     load(data);
     arch->close();

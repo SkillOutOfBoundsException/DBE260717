@@ -17,13 +17,15 @@ int main(){
 
     Archivo * a = new Archivo();
 
-    Engine * e = new Engine();
+    //Engine * e = new Engine();
+
+    BloqueMaster * bm = new BloqueMaster();
 
     //e->addCampoToTabla(2, "noob", 0);
     for(int i = 0; i < 30; i++){
-        e->bm->cantBloques++;
-        e->bm->write();
-        cout << e->bm->cantBloques << endl;
+        bm->cantBloques++;
+        bm->write();
+        cout << bm->cantBloques << endl;
     }
 
     //e->bm->read();

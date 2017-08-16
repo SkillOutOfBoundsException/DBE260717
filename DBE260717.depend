@@ -64,7 +64,7 @@
 
 1501115148 c:\users\diegu7-cb1\documents\c++\dbe260717\nodo.h
 
-1502843120 source:c:\users\diegu7-cb1\documents\c++\dbe260717\main.cpp
+1502844554 source:c:\users\diegu7-cb1\documents\c++\dbe260717\main.cpp
 	<iostream>
 	"Lista.h"
 	"Bloque.h"
@@ -151,7 +151,7 @@
 	<iostream>
 	<stdio.h>
 
-1502843120 source:c:\users\diegu7-cb1\documents\c++\dbe260717\bloquemaster.cpp
+1502844868 source:c:\users\diegu7-cb1\documents\c++\dbe260717\bloquemaster.cpp
 	"BloqueMaster.h"
 
 1502762438 c:\users\diegu7-cb1\documents\c++\dbe260717\bloquemaster.h
@@ -162,7 +162,7 @@
 1502819495 source:c:\users\diegu7-cb1\documents\c++\dbe260717\campo.cpp
 	"Campo.h"
 
-1502841784 source:c:\users\diegu7-cb1\documents\c++\dbe260717\engine.cpp
+1502844418 source:c:\users\diegu7-cb1\documents\c++\dbe260717\engine.cpp
 	"Engine.h"
 
 1502762008 c:\users\diegu7-cb1\documents\c++\dbe260717\engine.h

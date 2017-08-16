@@ -50,14 +50,14 @@ void BloqueTabla::load(char * data){
 }
 
 void BloqueTabla::write(){
-    arch->open("r+");
+    arch->open("rb+");
     char * data = toChar();
     arch->write(data, num*sizeB, sizeB);
     arch->close();
 }
 
 void BloqueTabla::read(){
-    arch->open("r");
+    arch->open("rb+");
     char * data = arch->read(num*sizeB, sizeB);
     load(data);
     arch->close();
