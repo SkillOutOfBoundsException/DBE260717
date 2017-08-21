@@ -44,6 +44,8 @@
 		<Unit filename="BloqueCampo.h" />
 		<Unit filename="BloqueMaster.cpp" />
 		<Unit filename="BloqueMaster.h" />
+		<Unit filename="BloqueRegistro.cpp" />
+		<Unit filename="BloqueRegistro.h" />
 		<Unit filename="BloqueTabla.cpp" />
 		<Unit filename="BloqueTabla.h" />
 		<Unit filename="Campo.cpp" />
