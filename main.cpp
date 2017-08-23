@@ -60,4 +60,48 @@ int main(){
         Poder crearlas:
             crear Tablas en 1 bloque;
             crear N Tablas en N bloques;
+
+    Registros:
+        Tamaño Variable;
+        Tamaño depende de la cantidad  tipo de campos;
+
+    Indice:
+        ???
+
+    Arboles AVL:
+        Balance:
+            |Altura_Izq - Altura_Der| < 2;
+            Caso contrario balancear (dentro del insert);
+
+            void insertar(Nodo * n){
+                insertar(&root, n);
+            }
+
+            void insertar(Nodo ** raiz, Nodo * n){
+                if(*raiz == null){
+                    *raiz = n;
+                    return;
+                }
+                if(*raiz->valor > n->valor){
+                    insertar(&(*raiz->izquierda), n);
+                }
+                else{
+                    insertar(&(*raiz->derecha), n);
+                }
+            }
+
+        Rotacion derecha simple (Hi - Hd == 2):
+            1- Crear temp apuntando a hijo izquierdo de Sroot;
+            2- Sroot->izq apunta a hijoIzq->der;
+            3- hijoIzq->der apunta a Sroot;
+            4- *Sroot = hijoIzq;
+        Rotacion izquirda simple (Hi - Hd == -2):
+            1- Crear temp apuntando a hijo derecho de Sroot;
+            2- Sroot->der apuntna a hijoDer->izq;
+            3- hijoDer->izq apunta a Sroot;
+            4- *Sroot = hijoIzq;
+
+
+
+
 */
