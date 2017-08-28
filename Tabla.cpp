@@ -92,14 +92,15 @@ char * Tabla::generateReg(){
     loadCampos();
     char * data = new char[tamReg()];
     int pos = 4;
+    cout << "Creando nuevo registro para la tabla " << nombre << endl;
     for(int i = 0; i < cantCampos; i++){
         Campo * c = campos->index(i);
-        cout << "Creando nuevo registro para la tabla " << nombre << endl;
         cout << "Ingrese la info del campo: ";
         c->printCampo();
         cout << endl;
         if(c->tipo == 1){
             char * d = new char[str_size];
+
             cin >> d;
             memcpy(&data[pos], &d[0], strlen(d));
             pos = pos + str_size;
@@ -223,14 +224,14 @@ void Tabla::printTabla(){
     cout << "Tabla - " << nombre << endl;
     cout << "ID - " << id << " - ";
     cout << cantCampos << " Campo(s): " << endl;
-    cout << " ";
     for(int i = 0; i < cantCampos; i ++){
-        cout << "| ";
+        cout << " | ";
         campos->index(i)->printCampo();
     }
-    cout << "|";
+    cout << " |" << endl;
     for(int i = 0; i < cantReg; i++){
         registros->index(i)->printRegistro();
+        cout << endl;
     }
 
 
@@ -239,5 +240,5 @@ void Tabla::printTabla(){
     //cout << primerBloqueReg << endl;
     //cout << actualBloqueReg << endl;
 
-    cout << "------------------------" << endl;
+    cout << endl << "------------------------" << endl;
 }

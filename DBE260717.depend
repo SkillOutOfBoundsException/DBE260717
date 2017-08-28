@@ -1,13 +1,13 @@
 # depslib dependency file v1.0
-1502401612 source:c:\users\diegu7\c++things\dbe260717\archivo.cpp
+1502823943 source:c:\users\diegu7\c++things\dbe260717\archivo.cpp
 	"Archivo.h"
 
-1501184457 c:\users\diegu7\c++things\dbe260717\archivo.h
+1502823943 c:\users\diegu7\c++things\dbe260717\archivo.h
 	<stdio.h>
 	<string.h>
 	<iostream>
 
-1502141171 source:c:\users\diegu7\c++things\dbe260717\bloque.cpp
+1502911908 source:c:\users\diegu7\c++things\dbe260717\bloque.cpp
 	"Bloque.h"
 
 1502307873 c:\users\diegu7\c++things\dbe260717\bloque.h
@@ -28,15 +28,20 @@
 1488922731 source:c:\users\diegu7\c++things\dbe260717\nodo.cpp
 	"Nodo.h"
 
-1502482082 source:c:\users\diegu7\c++things\dbe260717\main.cpp
+1503949802 source:c:\users\diegu7\c++things\dbe260717\main.cpp
 	<iostream>
 	"Lista.h"
 	"Bloque.h"
 	"BloqueTabla.h"
 	"BloqueMaster.h"
+	"BloqueCampo.h"
+	"Campo.h"
 	"Engine.h"
 	"Archivo.h"
 	<stdio.h>
+	<iostream>
+	<string>
+	<math.h>
 
 1502759119 source:c:\users\diegu7-cb1\documents\c++\dbe260717\archivo.cpp
 	"Archivo.h"
@@ -92,22 +97,25 @@
 	"Archivo.h"
 	"Bloque.h"
 
-1502472370 source:c:\users\diegu7\c++things\dbe260717\bloquetabla.cpp
+1502911908 source:c:\users\diegu7\c++things\dbe260717\bloquetabla.cpp
 	"BloqueTabla.h"
 
-1502472265 c:\users\diegu7\c++things\dbe260717\bloquetabla.h
+1502823943 c:\users\diegu7\c++things\dbe260717\bloquetabla.h
 	"Bloque.h"
 	"Lista.h"
 	"Tabla.h"
 
-1502481038 c:\users\diegu7\c++things\dbe260717\tabla.h
+1503946890 c:\users\diegu7\c++things\dbe260717\tabla.h
 	<string.h>
 	<iostream>
 	<stdio.h>
 	"Lista.h"
 	"Campo.h"
+	"Celda.h"
+	"Registro.h"
 	"BloqueMaster.h"
 	"BloqueCampo.h"
+	"BloqueRegistro.h"
 
 1501184457 source:c:\users\diegu7\c++things\dbe260717\bmanager.cpp
 	"BManager.h"
@@ -116,7 +124,7 @@
 	"Archivo.h"
 	"Bloque.h"
 
-1502482055 source:c:\users\diegu7\c++things\dbe260717\tabla.cpp
+1503949359 source:c:\users\diegu7\c++things\dbe260717\tabla.cpp
 	"Tabla.h"
 
 1502849079 source:c:\users\diegu7-cb1\documents\c++\dbe260717\bloquetabla.cpp
@@ -176,36 +184,39 @@
 	"Tabla.h"
 	"Archivo.h"
 
-1502400852 source:c:\users\diegu7\c++things\dbe260717\bloquecampo.cpp
+1502911908 source:c:\users\diegu7\c++things\dbe260717\bloquecampo.cpp
 	"BloqueCampo.h"
 
-1502400968 c:\users\diegu7\c++things\dbe260717\bloquecampo.h
+1502823943 c:\users\diegu7\c++things\dbe260717\bloquecampo.h
 	"Bloque.h"
 	"Campo.h"
 	"Lista.h"
 
-1502478680 c:\users\diegu7\c++things\dbe260717\campo.h
+1503946890 c:\users\diegu7\c++things\dbe260717\campo.h
 	<string.h>
 	<iostream>
 	<stdio.h>
 
-1502477983 source:c:\users\diegu7\c++things\dbe260717\bloquemaster.cpp
+1502911908 source:c:\users\diegu7\c++things\dbe260717\bloquemaster.cpp
 	"BloqueMaster.h"
 
-1502475350 c:\users\diegu7\c++things\dbe260717\bloquemaster.h
+1502823943 c:\users\diegu7\c++things\dbe260717\bloquemaster.h
 	"Bloque.h"
+	<string.h>
+	<iostream>
 
-1502482156 source:c:\users\diegu7\c++things\dbe260717\campo.cpp
+1503946890 source:c:\users\diegu7\c++things\dbe260717\campo.cpp
 	"Campo.h"
 
-1502481936 source:c:\users\diegu7\c++things\dbe260717\engine.cpp
+1503947162 source:c:\users\diegu7\c++things\dbe260717\engine.cpp
 	"Engine.h"
 
-1502482030 c:\users\diegu7\c++things\dbe260717\engine.h
+1503946890 c:\users\diegu7\c++things\dbe260717\engine.h
 	"BloqueMaster.h"
 	"BloqueTabla.h"
 	"Lista.h"
 	"Tabla.h"
+	"Archivo.h"
 
 1503935950 source:c:\users\diegu7-cb1\documents\c++\dbe260717\bloqueregistro.cpp
 	"BloqueRegistro.h"
@@ -231,4 +242,29 @@
 	<stdio.h>
 	<string.h>
 	"Campo.h"
+
+1503946890 source:c:\users\diegu7\c++things\dbe260717\bloqueregistro.cpp
+	"BloqueRegistro.h"
+
+1503946890 c:\users\diegu7\c++things\dbe260717\bloqueregistro.h
+	"Bloque.h"
+	"Lista.h"
+	"Registro.h"
+
+1503946890 c:\users\diegu7\c++things\dbe260717\registro.h
+	<stdio.h>
+	<string.h>
+	"Lista.h"
+	"Celda.h"
+
+1503946890 c:\users\diegu7\c++things\dbe260717\celda.h
+	<stdio.h>
+	<string.h>
+	"Campo.h"
+
+1503949702 source:c:\users\diegu7\c++things\dbe260717\registro.cpp
+	"Registro.h"
+
+1503949276 source:c:\users\diegu7\c++things\dbe260717\celda.cpp
+	"Celda.h"
 

@@ -11,19 +11,16 @@ void Registro::setAttributes(char * d){
 }
 
 char * Registro::toChar(){
-    char * reg = new char[len + int_size];
+    char * reg = new char[len];
     int pos = 0;
-    memcpy(&reg[pos], &len, int_size);
-    pos = pos + int_size;
     memcpy(&reg[pos], &data[0], len);
-    pos = pos + len;
+    memcpy(&reg[pos], &len, int_size);
     return reg;
 }
 
 void Registro::loadRegistro(char * reg){
     int pos = 0;
     memcpy(&len, &reg[pos], int_size);
-    pos = pos + int_size;
     data = new char[len];
     memcpy(&data[0], &reg[pos], len);
     pos = pos + len;
@@ -32,8 +29,8 @@ void Registro::loadRegistro(char * reg){
 void Registro::printRegistro(){
     cout << " ";
     for(int i = 0; i < celdas->length(); i++){
-        cout << "| ";
+        cout << " | ";
         celdas->index(i)->printCelda();
     }
-    cout << "|";
+    cout << " |";
 }

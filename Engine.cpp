@@ -70,6 +70,24 @@ void Engine::addCampoToTabla(int idTabla, char * nombre, int tipo){
     bt->write();
 }
 
+void Engine::addRegistroToTabla(int idTabla){
+    BloqueTabla * bt = searchBloqueTabla(idTabla);
+    if(bt == 0){
+        cout << "tabla not found" << endl;
+        return;
+    }
+    Tabla * t = 0;
+    for(int i = 0; i < bt->cantTablas; i++){
+        Tabla * temp = bt->tablas->index(i);
+        if(idTabla == temp->id){
+            t = temp;
+            break;
+        }
+    }
+    t->addRegistro(t->generateReg(), bm);
+    bt->write();
+}
+
 BloqueTabla * Engine::searchBloqueTabla(int id){
     int i = bm->primerBloqueTabla;
     while(i != -1){

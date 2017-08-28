@@ -18,16 +18,25 @@ using namespace std;
 int main(){
 
 
-    //Engine * e = new Engine();
+    Engine * e = new Engine();
 
     //e->addCampoToTabla(2, "noob", 0);
-    /*for(int i = 0; i < 500; i++){
-        for(int k = 0; k < 100; k++){
-            e->addCampoToTabla(i, "kekistan", 1);
-        }
-    }*/
+    //for(int i = 0; i <1; i++){
+    //    e->addTabla("tablaName");
+    //    e->addRegistroToTabla(0);
+    //}
 
-    //e->printTablas();
+
+
+    //e->addCampoToTabla(0, "Nombre", 1);
+    //e->addCampoToTabla(1, "Apellido", 1);
+    //e->addCampoToTabla(0, "Edad", 0);
+    //e->addRegistroToTabla(3);
+
+    //e->searchTabla(3)->printTabla();
+
+    e->printTablas();
+
     return 0;
 }
 
