@@ -56,6 +56,8 @@
 		<Unit filename="Lista.h" />
 		<Unit filename="Nodo.cpp" />
 		<Unit filename="Nodo.h" />
+		<Unit filename="Registro.cpp" />
+		<Unit filename="Registro.h" />
 		<Unit filename="Tabla.cpp" />
 		<Unit filename="Tabla.h" />
 		<Unit filename="db.txt" />

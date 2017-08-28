@@ -16,6 +16,8 @@ Tabla::Tabla(int n){
 }
 
 void Tabla::addCampo(char * nombre, int tipo, BloqueMaster * bm){
+    if(primerBloqueReg != -1)
+        return;
     Campo * c = new Campo();
     c->setAttributes(nombre, tipo);
     cantCampos++;

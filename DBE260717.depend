@@ -41,7 +41,7 @@
 1502759119 source:c:\users\diegu7-cb1\documents\c++\dbe260717\archivo.cpp
 	"Archivo.h"
 
-1502759119 c:\users\diegu7-cb1\documents\c++\dbe260717\archivo.h
+1502864000 c:\users\diegu7-cb1\documents\c++\dbe260717\archivo.h
 	<stdio.h>
 	<string.h>
 	<iostream>
@@ -64,7 +64,7 @@
 
 1501115148 c:\users\diegu7-cb1\documents\c++\dbe260717\nodo.h
 
-1502849990 source:c:\users\diegu7-cb1\documents\c++\dbe260717\main.cpp
+1503787500 source:c:\users\diegu7-cb1\documents\c++\dbe260717\main.cpp
 	<iostream>
 	"Lista.h"
 	"Bloque.h"
@@ -135,7 +135,7 @@
 	"BloqueMaster.h"
 	"BloqueCampo.h"
 
-1502839869 source:c:\users\diegu7-cb1\documents\c++\dbe260717\tabla.cpp
+1503791927 source:c:\users\diegu7-cb1\documents\c++\dbe260717\tabla.cpp
 	"Tabla.h"
 
 1502849099 source:c:\users\diegu7-cb1\documents\c++\dbe260717\bloquecampo.cpp
@@ -151,7 +151,7 @@
 	<iostream>
 	<stdio.h>
 
-1502849108 source:c:\users\diegu7-cb1\documents\c++\dbe260717\bloquemaster.cpp
+1502863384 source:c:\users\diegu7-cb1\documents\c++\dbe260717\bloquemaster.cpp
 	"BloqueMaster.h"
 
 1502762438 c:\users\diegu7-cb1\documents\c++\dbe260717\bloquemaster.h
@@ -202,4 +202,19 @@
 	"BloqueTabla.h"
 	"Lista.h"
 	"Tabla.h"
+
+1503792056 source:c:\users\diegu7-cb1\documents\c++\dbe260717\bloqueregistro.cpp
+	"BloqueRegistro.h"
+
+1503791962 c:\users\diegu7-cb1\documents\c++\dbe260717\bloqueregistro.h
+	"Bloque.h"
+	"Lista.h"
+	"Registro.h"
+
+1503792114 c:\users\diegu7-cb1\documents\c++\dbe260717\registro.h
+	<stdio.h>
+	<string.h>
+
+1503792074 source:c:\users\diegu7-cb1\documents\c++\dbe260717\registro.cpp
+	"Registro.h"
 
