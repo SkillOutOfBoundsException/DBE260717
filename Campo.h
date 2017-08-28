@@ -23,8 +23,6 @@ class Campo{
 
         void setAttributes(char * n, int t);
         void printCampo();
-
-
 };
 
 #endif // CAMPO_H

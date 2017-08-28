@@ -64,7 +64,7 @@
 
 1501115148 c:\users\diegu7-cb1\documents\c++\dbe260717\nodo.h
 
-1503787500 source:c:\users\diegu7-cb1\documents\c++\dbe260717\main.cpp
+1503941605 source:c:\users\diegu7-cb1\documents\c++\dbe260717\main.cpp
 	<iostream>
 	"Lista.h"
 	"Bloque.h"
@@ -75,6 +75,7 @@
 	"Engine.h"
 	"Archivo.h"
 	<stdio.h>
+	<math.h>
 
 1501115148 source:c:\users\diegu7-cb1\documents\c++\dbe260717\nodo.cpp
 	"Nodo.h"
@@ -126,16 +127,19 @@
 	"Lista.h"
 	"Tabla.h"
 
-1502759120 c:\users\diegu7-cb1\documents\c++\dbe260717\tabla.h
+1503942248 c:\users\diegu7-cb1\documents\c++\dbe260717\tabla.h
 	<string.h>
 	<iostream>
 	<stdio.h>
 	"Lista.h"
 	"Campo.h"
+	"Celda.h"
+	"Registro.h"
 	"BloqueMaster.h"
 	"BloqueCampo.h"
+	"BloqueRegistro.h"
 
-1503791927 source:c:\users\diegu7-cb1\documents\c++\dbe260717\tabla.cpp
+1503943712 source:c:\users\diegu7-cb1\documents\c++\dbe260717\tabla.cpp
 	"Tabla.h"
 
 1502849099 source:c:\users\diegu7-cb1\documents\c++\dbe260717\bloquecampo.cpp
@@ -146,7 +150,7 @@
 	"Campo.h"
 	"Lista.h"
 
-1502759120 c:\users\diegu7-cb1\documents\c++\dbe260717\campo.h
+1503936014 c:\users\diegu7-cb1\documents\c++\dbe260717\campo.h
 	<string.h>
 	<iostream>
 	<stdio.h>
@@ -159,7 +163,7 @@
 	<string.h>
 	<iostream>
 
-1502819495 source:c:\users\diegu7-cb1\documents\c++\dbe260717\campo.cpp
+1503943134 source:c:\users\diegu7-cb1\documents\c++\dbe260717\campo.cpp
 	"Campo.h"
 
 1502844418 source:c:\users\diegu7-cb1\documents\c++\dbe260717\engine.cpp
@@ -203,18 +207,28 @@
 	"Lista.h"
 	"Tabla.h"
 
-1503792056 source:c:\users\diegu7-cb1\documents\c++\dbe260717\bloqueregistro.cpp
+1503935950 source:c:\users\diegu7-cb1\documents\c++\dbe260717\bloqueregistro.cpp
 	"BloqueRegistro.h"
 
-1503791962 c:\users\diegu7-cb1\documents\c++\dbe260717\bloqueregistro.h
+1503937046 c:\users\diegu7-cb1\documents\c++\dbe260717\bloqueregistro.h
 	"Bloque.h"
 	"Lista.h"
 	"Registro.h"
 
-1503792114 c:\users\diegu7-cb1\documents\c++\dbe260717\registro.h
+1503942741 c:\users\diegu7-cb1\documents\c++\dbe260717\registro.h
 	<stdio.h>
 	<string.h>
+	"Lista.h"
+	"Celda.h"
 
-1503792074 source:c:\users\diegu7-cb1\documents\c++\dbe260717\registro.cpp
+1503943200 source:c:\users\diegu7-cb1\documents\c++\dbe260717\registro.cpp
 	"Registro.h"
+
+1503941814 source:c:\users\diegu7-cb1\documents\c++\dbe260717\celda.cpp
+	"Celda.h"
+
+1503941543 c:\users\diegu7-cb1\documents\c++\dbe260717\celda.h
+	<stdio.h>
+	<string.h>
+	"Campo.h"
 

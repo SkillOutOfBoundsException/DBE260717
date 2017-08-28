@@ -3,6 +3,11 @@
 Registro::Registro(int l){
     len = l;
     data = new char[len];
+    celdas = new Lista<Celda*>();
+}
+
+void Registro::setAttributes(char * d){
+    memcpy(&data[0], &d[0], len);
 }
 
 char * Registro::toChar(){
@@ -22,4 +27,13 @@ void Registro::loadRegistro(char * reg){
     data = new char[len];
     memcpy(&data[0], &reg[pos], len);
     pos = pos + len;
+}
+
+void Registro::printRegistro(){
+    cout << " ";
+    for(int i = 0; i < celdas->length(); i++){
+        cout << "| ";
+        celdas->index(i)->printCelda();
+    }
+    cout << "|";
 }

@@ -13,6 +13,7 @@ Tabla::Tabla(int n){
     cantBloqueCampos = 0;
     cantBloqueReg = 0;
     campos = new Lista<Campo*>();
+    registros = new Lista<Registro*>();
 }
 
 void Tabla::addCampo(char * nombre, int tipo, BloqueMaster * bm){
@@ -45,6 +46,74 @@ void Tabla::addCampo(char * nombre, int tipo, BloqueMaster * bm){
         bc->write();
     }
     bm->write();
+}
+
+void Tabla::addRegistro(char * data, BloqueMaster * bm){
+    if(primerBloqueCampo == -1)
+        return;
+    int tReg = tamReg();
+    Registro * r = new Registro(tReg);
+    r->setAttributes(data);
+    cantReg++;
+    if(primerBloqueReg == -1){
+        BloqueRegistro * br = new BloqueRegistro(bm->cantBloques, tReg);
+        cantBloqueReg++;
+        bm->cantBloques++;
+        primerBloqueReg = br->num;
+        actualBloqueReg = br->num;
+        br->addReg(r);
+        br->write();
+    }
+    else{
+        BloqueRegistro * br = new BloqueRegistro(actualBloqueReg, tReg);
+        br->read();
+        if(!br->addReg(r)){
+            BloqueRegistro * br2 = new BloqueRegistro(bm->cantBloques, tReg);
+            cantBloqueReg++;
+            bm->cantBloques++;
+            br->sig = br2->num;
+            actualBloqueReg = br2->num;
+            br2->addReg(r);
+            br2->write();
+        }
+        br->write();
+    }
+    bm->write();
+}
+
+char * Tabla::generateReg(){
+    loadCampos();
+    char * data = new char[tamReg()];
+    int pos = 4;
+    for(int i = 0; i < cantCampos; i++){
+        Campo * c = campos->index(i);
+        cout << "Creando nuevo registro para la tabla " << nombre << endl;
+        cout << "Ingrese la info del campo: ";
+        c->printCampo();
+        cout << endl;
+        if(c->tipo == 1){
+            char * d = new char[str_size];
+            cin >> d;
+            memcpy(&data[pos], &d[0], strlen(d));
+            pos = pos + str_size;
+        }
+        else{
+            int x;
+            cin >> x;
+            memcpy(&data[pos], &x, int_size);
+            pos = pos + int_size;
+        }
+    }
+    return data;
+}
+
+int Tabla::tamReg(){
+    loadCampos();
+    int tam = 4;
+    for(int i = 0; i < cantCampos; i ++){
+        tam = tam + campos->index(i)->regSize;
+    }
+    return tam;
 }
 
 void Tabla::loadTabla(char * data){
@@ -104,9 +173,8 @@ void Tabla::setNombre(char* n){
 
 void Tabla::loadCampos(){
     campos->clearList();
-    if(primerBloqueCampo == -1){
+    if(primerBloqueCampo == -1)
         return;
-    }
     int i = primerBloqueCampo;
     while(i != -1){
         BloqueCampo * bc = new BloqueCampo(i);
@@ -117,17 +185,50 @@ void Tabla::loadCampos(){
     }
 }
 
+void Tabla::loadRegs(){
+    registros->clearList();
+    if(primerBloqueReg == -1)
+        return;
+    loadCampos();
+    int i = primerBloqueReg;
+    int tR = tamReg();
+    while(i != -1){
+        BloqueRegistro * br = new BloqueRegistro(i, tR);
+        br->read();
+        for(int k = 0; k < br->cantReg; k++){
+            Registro * r = br->registros->index(k);
+            r->celdas->clearList();
+            int pos = 4;
+            for(int j = 0; j < cantCampos; j++){
+                Campo * c = campos->index(j);
+                r->celdas->pushBack(new Celda(c, &r->data[pos]));
+                pos = pos + c->regSize;
+            }
+            registros->pushBack(r);
+        }
+        i = br->sig;
+    }
+}
+
 void Tabla::printTabla(){
     loadCampos();
+    loadRegs();
     cout << "Tabla - " << nombre << endl;
     cout << "ID - " << id << " - ";
     cout << cantCampos << " Campo(s): " << endl;
+    cout << " ";
     for(int i = 0; i < cantCampos; i ++){
+        cout << "| ";
         campos->index(i)->printCampo();
     }
+    cout << "|";
+    for(int i = 0; i < cantReg; i++){
+        registros->index(i)->printRegistro();
+    }
 
-    cout << primerBloqueCampo << endl;
-    cout << actualBloqueCampo << endl;
+
+    //cout << primerBloqueCampo << endl;
+    //cout << actualBloqueCampo << endl;
     //cout << primerBloqueReg << endl;
     //cout << actualBloqueReg << endl;
 

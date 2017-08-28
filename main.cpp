@@ -8,7 +8,9 @@
 #include "Engine.h"
 #include "Archivo.h"
 #include <stdio.h>
-
+#include <iostream>
+#include <string>
+#include <math.h>
 
 using namespace std;
 
@@ -16,7 +18,7 @@ using namespace std;
 int main(){
 
 
-    Engine * e = new Engine();
+    //Engine * e = new Engine();
 
     //e->addCampoToTabla(2, "noob", 0);
     /*for(int i = 0; i < 500; i++){
@@ -25,18 +27,7 @@ int main(){
         }
     }*/
 
-    e->printTablas();
-
-
-
-
-
-
-
-
-
-
-
+    //e->printTablas();
     return 0;
 }
 

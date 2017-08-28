@@ -5,8 +5,11 @@
 #include <stdio.h>
 #include "Lista.h"
 #include "Campo.h"
+#include "Celda.h"
+#include "Registro.h"
 #include "BloqueMaster.h"
 #include "BloqueCampo.h"
+#include "BloqueRegistro.h"
 #define tabla_size 56 //tablaSize
 #define int_size sizeof(int)
 #define str_size 20
@@ -31,13 +34,20 @@ class Tabla{
         int cantBloqueReg;
 
         Lista<Campo*> * campos;
+        Lista<Registro*> * registros;
 
         void addCampo(char* nombre, int tipo, BloqueMaster * bm);
+
+        void addRegistro(char * data, BloqueMaster * bm);
+        char * generateReg();
+        int tamReg();
 
         char * toChar();
         void loadTabla(char*);
 
         void loadCampos();
+        void loadRegs();
+
         void setNombre(char*);
         void printTabla();
 

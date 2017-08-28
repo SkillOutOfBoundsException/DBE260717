@@ -14,7 +14,7 @@ class BloqueRegistro : public Bloque{
         int cantReg;
         int tamReg;
 
-        bool addReg();
+        bool addReg(Registro * r);
 
         char * toChar();
         void load(char*);

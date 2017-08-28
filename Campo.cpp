@@ -41,5 +41,6 @@ void Campo::printCampo(){
         memcpy(&t[0], "STRING" , 10);
     else
         memcpy(&t[0], "INT" , 10);
-    cout << "->" <<nombre << " - " << t << " - size: " << regSize << endl;
+    //cout << "->" <<nombre << " - " << t << " - size: " << regSize << endl;
+    cout << nombre << "(" << t << ")";
 }
