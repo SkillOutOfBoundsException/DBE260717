@@ -21,6 +21,8 @@ void Tabla::addCampo(char * nombre, int tipo, BloqueMaster * bm){
         return;
     Campo * c = new Campo();
     c->setAttributes(nombre, tipo);
+    if(!campoSpace(c))
+        return;
     cantCampos++;
     if(primerBloqueCampo == -1){
         BloqueCampo * bc = new BloqueCampo(bm->cantBloques);
@@ -46,6 +48,11 @@ void Tabla::addCampo(char * nombre, int tipo, BloqueMaster * bm){
         bc->write();
     }
     bm->write();
+}
+
+bool Tabla::campoSpace(Campo * c){
+    int bRegTaken = 20 + tamReg() + c->regSize;
+    return !(bRegTaken >= 512);
 }
 
 void Tabla::addRegistro(char * data, BloqueMaster * bm){

@@ -36,6 +36,7 @@ class Tabla{
         Lista<Campo*> * campos;
         Lista<Registro*> * registros;
 
+        bool campoSpace(Campo *);
         void addCampo(char* nombre, int tipo, BloqueMaster * bm);
 
         void addRegistro(char * data, BloqueMaster * bm);
