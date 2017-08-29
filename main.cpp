@@ -20,24 +20,14 @@ int main(){
 
     Engine * e = new Engine();
 
-    //e->addCampoToTabla(2, "noob", 0);
+    /*
     for(int i = 0; i < 100; i++){
         e->addTabla("WOW");
         for(int k = 0; k < 10; k++){
             e->addCampoToTabla(i, "Campo", k%2);
         }
     }
-
-
-    //e->addCampoToTabla(1, "WOWZERS", 0);
-
-    //e->addTabla("testing campos");
-
-    //e->addCampoToTabla(0, "Nombre", 1);
-    //e->addCampoToTabla(1, "Apellido", 1);
-    //e->addCampoToTabla(0, "Edad", 0);
-    //e->addRegistroToTabla(0);
-    //e->searchTabla(3)->printTabla();
+    */
 
     e->printTablas();
 
@@ -69,43 +59,23 @@ int main(){
         Tamaño Variable;
         Tamaño depende de la cantidad  tipo de campos;
 
-    Indice:
-        ???
+    Hash Tables:
+        Propiedades:
+            -Insertar O(1)
+            -Buscar O(1)
+            -Eliminar O(1)
 
-    Arboles AVL:
-        Balance:
-            |Altura_Izq - Altura_Der| < 2;
-            Caso contrario balancear (dentro del insert);
+        Hash Function:
+            Buscamos mayor dispercion posible;
 
-            void insertar(Nodo * n){
-                insertar(&root, n);
-            }
-
-            void insertar(Nodo ** raiz, Nodo * n){
-                if(*raiz == null){
-                    *raiz = n;
-                    return;
+            Ejemplo para examen:
+                int fnHash(char * k){
+                    return keytoInt(k)%m;
                 }
-                if(*raiz->valor > n->valor){
-                    insertar(&(*raiz->izquierda), n);
-                }
-                else{
-                    insertar(&(*raiz->derecha), n);
-                }
-            }
 
-        Rotacion derecha simple (Hi - Hd == 2):
-            1- Crear temp apuntando a hijo izquierdo de Sroot;
-            2- Sroot->izq apunta a hijoIzq->der;
-            3- hijoIzq->der apunta a Sroot;
-            4- *Sroot = hijoIzq;
-        Rotacion izquirda simple (Hi - Hd == -2):
-            1- Crear temp apuntando a hijo derecho de Sroot;
-            2- Sroot->der apuntna a hijoDer->izq;
-            3- hijoDer->izq apunta a Sroot;
-            4- *Sroot = hijoIzq;
+            fnHash pronostica C colisiones para tablas de tamano M con N elementos;
 
-
-
+            Formas de manejar colisiones:
+                Sumarle 1 a fnHash(k);
 
 */
