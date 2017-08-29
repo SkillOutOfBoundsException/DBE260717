@@ -50,6 +50,8 @@
 		<Unit filename="BloqueTabla.h" />
 		<Unit filename="Campo.cpp" />
 		<Unit filename="Campo.h" />
+		<Unit filename="Celda.cpp" />
+		<Unit filename="Celda.h" />
 		<Unit filename="Engine.cpp" />
 		<Unit filename="Engine.h" />
 		<Unit filename="Lista.cpp" />

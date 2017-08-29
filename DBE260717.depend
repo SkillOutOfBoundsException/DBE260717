@@ -28,7 +28,7 @@
 1488922731 source:c:\users\diegu7\c++things\dbe260717\nodo.cpp
 	"Nodo.h"
 
-1503949802 source:c:\users\diegu7\c++things\dbe260717\main.cpp
+1503953955 source:c:\users\diegu7\c++things\dbe260717\main.cpp
 	<iostream>
 	"Lista.h"
 	"Bloque.h"
@@ -124,7 +124,7 @@
 	"Archivo.h"
 	"Bloque.h"
 
-1503949359 source:c:\users\diegu7\c++things\dbe260717\tabla.cpp
+1503954300 source:c:\users\diegu7\c++things\dbe260717\tabla.cpp
 	"Tabla.h"
 
 1502849079 source:c:\users\diegu7-cb1\documents\c++\dbe260717\bloquetabla.cpp
@@ -262,9 +262,9 @@
 	<string.h>
 	"Campo.h"
 
-1503949702 source:c:\users\diegu7\c++things\dbe260717\registro.cpp
+1503949932 source:c:\users\diegu7\c++things\dbe260717\registro.cpp
 	"Registro.h"
 
-1503949276 source:c:\users\diegu7\c++things\dbe260717\celda.cpp
+1503949961 source:c:\users\diegu7\c++things\dbe260717\celda.cpp
 	"Celda.h"
 

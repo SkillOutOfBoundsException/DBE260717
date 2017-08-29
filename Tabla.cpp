@@ -17,12 +17,17 @@ Tabla::Tabla(int n){
 }
 
 void Tabla::addCampo(char * nombre, int tipo, BloqueMaster * bm){
-    if(primerBloqueReg != -1)
+    if(primerBloqueReg != -1){
+        cout << "No se pueden agregar campos a una tabla con registros existentes" << endl;
         return;
+    }
     Campo * c = new Campo();
     c->setAttributes(nombre, tipo);
-    if(!campoSpace(c))
+    if(!campoSpace(c)){
+        cout << "No hay espacio para mas campos" << endl;
         return;
+    }
+
     cantCampos++;
     if(primerBloqueCampo == -1){
         BloqueCampo * bc = new BloqueCampo(bm->cantBloques);
@@ -52,12 +57,14 @@ void Tabla::addCampo(char * nombre, int tipo, BloqueMaster * bm){
 
 bool Tabla::campoSpace(Campo * c){
     int bRegTaken = 20 + tamReg() + c->regSize;
-    return !(bRegTaken >= 512);
+    return !(bRegTaken > 512);
 }
 
 void Tabla::addRegistro(char * data, BloqueMaster * bm){
-    if(primerBloqueCampo == -1)
+    if(primerBloqueCampo == -1){
+        cout << "No se pueden agregar registros a una tabla sin campos" << endl;
         return;
+    }
     int tReg = tamReg();
     Registro * r = new Registro(tReg);
     r->setAttributes(data);

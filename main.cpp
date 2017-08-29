@@ -21,18 +21,22 @@ int main(){
     Engine * e = new Engine();
 
     //e->addCampoToTabla(2, "noob", 0);
-    //for(int i = 0; i <1; i++){
-    //    e->addTabla("tablaName");
-    //    e->addRegistroToTabla(0);
-    //}
+    for(int i = 0; i < 100; i++){
+        e->addTabla("WOW");
+        for(int k = 0; k < 10; k++){
+            e->addCampoToTabla(i, "Campo", k%2);
+        }
+    }
 
 
+    //e->addCampoToTabla(1, "WOWZERS", 0);
+
+    //e->addTabla("testing campos");
 
     //e->addCampoToTabla(0, "Nombre", 1);
     //e->addCampoToTabla(1, "Apellido", 1);
     //e->addCampoToTabla(0, "Edad", 0);
-    //e->addRegistroToTabla(3);
-
+    //e->addRegistroToTabla(0);
     //e->searchTabla(3)->printTabla();
 
     e->printTablas();
