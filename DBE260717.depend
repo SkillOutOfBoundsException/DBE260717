@@ -135,7 +135,7 @@
 	"Lista.h"
 	"Tabla.h"
 
-1503942248 c:\users\diegu7-cb1\documents\c++\dbe260717\tabla.h
+1503944396 c:\users\diegu7-cb1\documents\c++\dbe260717\tabla.h
 	<string.h>
 	<iostream>
 	<stdio.h>
@@ -147,7 +147,7 @@
 	"BloqueCampo.h"
 	"BloqueRegistro.h"
 
-1503943712 source:c:\users\diegu7-cb1\documents\c++\dbe260717\tabla.cpp
+1504057726 source:c:\users\diegu7-cb1\documents\c++\dbe260717\tabla.cpp
 	"Tabla.h"
 
 1502849099 source:c:\users\diegu7-cb1\documents\c++\dbe260717\bloquecampo.cpp
@@ -174,10 +174,10 @@
 1503943134 source:c:\users\diegu7-cb1\documents\c++\dbe260717\campo.cpp
 	"Campo.h"
 
-1502844418 source:c:\users\diegu7-cb1\documents\c++\dbe260717\engine.cpp
+1504057726 source:c:\users\diegu7-cb1\documents\c++\dbe260717\engine.cpp
 	"Engine.h"
 
-1502762008 c:\users\diegu7-cb1\documents\c++\dbe260717\engine.h
+1503944283 c:\users\diegu7-cb1\documents\c++\dbe260717\engine.h
 	"BloqueMaster.h"
 	"BloqueTabla.h"
 	"Lista.h"
@@ -232,7 +232,7 @@
 	"Lista.h"
 	"Celda.h"
 
-1503943200 source:c:\users\diegu7-cb1\documents\c++\dbe260717\registro.cpp
+1504057726 source:c:\users\diegu7-cb1\documents\c++\dbe260717\registro.cpp
 	"Registro.h"
 
 1503941814 source:c:\users\diegu7-cb1\documents\c++\dbe260717\celda.cpp

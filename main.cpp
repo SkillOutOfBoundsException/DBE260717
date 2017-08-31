@@ -20,19 +20,6 @@ int main(){
 
 
 
-    Engine * e = new Engine();
-
-    /*
-    for(int i = 0; i < 100; i++){
-        e->addTabla("WOW");
-        for(int k = 0; k < 10; k++){
-            e->addCampoToTabla(i, "Campo", k%2);
-        }
-    }
-    */
-
-    e->printTablas();
-
     return 0;
 }
 
