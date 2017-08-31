@@ -3,6 +3,7 @@
 #include <string.h>
 #include <iostream>
 #include <stdio.h>
+#include <vector>
 #include "Lista.h"
 #include "Campo.h"
 #include "Celda.h"
@@ -10,11 +11,13 @@
 #include "BloqueMaster.h"
 #include "BloqueCampo.h"
 #include "BloqueRegistro.h"
+#include "json11.hpp"
 #define tabla_size 56 //tablaSize
 #define int_size sizeof(int)
 #define str_size 20
 
 using namespace std;
+using namespace json11;
 
 class Tabla{
     public:
@@ -42,6 +45,10 @@ class Tabla{
         void addRegistro(char * data, BloqueMaster * bm);
         char * generateReg();
         int tamReg();
+
+        Json registrosToJson();
+        Json camposToJson();
+        Json tablaToJson();
 
         char * toChar();
         void loadTabla(char*);

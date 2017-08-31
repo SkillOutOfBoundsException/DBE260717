@@ -12,12 +12,19 @@ Celda::Celda(Campo * c, char * d){
     }
 }
 
+int Celda::getInt(){
+    if(campo->tipo == 1)
+        return -777;
+    int d;
+    memcpy(&d, &data[0], int_size);
+    return d;
+}
+
 void Celda::printCelda(){
     if(campo->tipo == 1)
         cout << data;
     else{
-        int d;
-        memcpy(&d, &data[0], int_size);
+        int d = getInt();
         cout << d;
     }
 }

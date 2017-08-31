@@ -14,6 +14,8 @@ class Celda{
         Campo * campo;
         char * data;
 
+        int getInt();
+
         void printCelda();
 };
 

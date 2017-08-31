@@ -70,7 +70,7 @@ void Engine::addCampoToTabla(int idTabla, char * nombre, int tipo){
     bt->write();
 }
 
-void Engine::addRegistroToTabla(int idTabla){
+void Engine::addRegistroToTabla(int idTabla, char * data){
     BloqueTabla * bt = searchBloqueTabla(idTabla);
     if(bt == 0){
         cout << "tabla not found" << endl;
@@ -84,7 +84,8 @@ void Engine::addRegistroToTabla(int idTabla){
             break;
         }
     }
-    t->addRegistro(t->generateReg(), bm);
+    data = data == 0 ? t->generateReg() : data;
+    t->addRegistro(data, bm);
     bt->write();
 }
 
@@ -110,6 +111,70 @@ Tabla * Engine::searchTabla(int id){
             return t;
     }
     return 0;
+}
+
+void Engine::writeJson(){
+    loadTablas();
+    vector<Json> jTablas;
+    for(int i = 0; i < bm->cantTablas; i++){
+        Json js = tablas->index(i)->tablaToJson();
+        jTablas.push_back(js);
+    }
+    Json jDB = Json::object{
+        {"cantTablas", bm->cantTablas},
+        {"Tablas", jTablas}
+    };
+    ofstream rip("db.json");
+    rip << jDB.dump();
+    rip.close();
+}
+
+void Engine::readJson(){
+    format();
+    ifstream rip("db.json");
+    string e;
+    string j;
+    getline(rip, j);
+    rip.close();
+    Json jDB = Json::parse(j, e);
+    int ct = jDB["cantTablas"].int_value();
+    for(int i = 0; i < ct; i++){
+        Json jtabla = jDB["Tablas"][i];
+        char * nom = new char[20];
+        strcpy(nom, jtabla["Nombre"].string_value().c_str());
+        addTabla(nom);
+        Json jcampos = jtabla["Campos"];
+        int cc = jcampos["cantCampos"].int_value();
+        for(int k = 0; k < cc; k++){
+            Json campo = jcampos["Campos"][k];
+            char * cNom = new char[20];
+            strcpy(cNom, campo["nombre"].string_value().c_str());
+            int tipo = campo["tipo"].int_value();
+            addCampoToTabla(i, cNom, tipo);
+        }
+        Json jregistros = jtabla["Registros"];
+        int cr = jregistros["cantReg"].int_value();
+        for(int k = 0; k < cr; k++){
+            char * data = new char[searchTabla(i)->tamReg()];
+            int pos = 4;
+            for(int j = 0; j < cc; j++){
+                Json celda = jregistros["Registros"][k][j];
+                int tipo = celda["tipo"].int_value();
+                if(tipo == 1){
+                    char * cData = new char[20];
+                    strcpy(cData, celda["data"].string_value().c_str());
+                    memcpy(&data[pos], &cData[0], str_size);
+                    pos = pos + str_size;
+                }
+                else{
+                    int cData = celda["data"].int_value();
+                    memcpy(&data[pos], &cData, int_size);
+                    pos = pos + int_size;
+                }
+            }
+            addRegistroToTabla(i, data);
+        }
+    }
 }
 
 void Engine::loadTablas(){

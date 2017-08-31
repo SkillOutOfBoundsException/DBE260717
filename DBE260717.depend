@@ -69,7 +69,7 @@
 
 1501115148 c:\users\diegu7-cb1\documents\c++\dbe260717\nodo.h
 
-1503941605 source:c:\users\diegu7-cb1\documents\c++\dbe260717\main.cpp
+1504200360 source:c:\users\diegu7-cb1\documents\c++\dbe260717\main.cpp
 	<iostream>
 	"Lista.h"
 	"Bloque.h"
@@ -79,7 +79,10 @@
 	"Campo.h"
 	"Engine.h"
 	"Archivo.h"
+	"json11.hpp"
 	<stdio.h>
+	<iostream>
+	<string>
 	<math.h>
 
 1501115148 source:c:\users\diegu7-cb1\documents\c++\dbe260717\nodo.cpp
@@ -135,10 +138,11 @@
 	"Lista.h"
 	"Tabla.h"
 
-1503944396 c:\users\diegu7-cb1\documents\c++\dbe260717\tabla.h
+1504199767 c:\users\diegu7-cb1\documents\c++\dbe260717\tabla.h
 	<string.h>
 	<iostream>
 	<stdio.h>
+	<vector>
 	"Lista.h"
 	"Campo.h"
 	"Celda.h"
@@ -146,8 +150,9 @@
 	"BloqueMaster.h"
 	"BloqueCampo.h"
 	"BloqueRegistro.h"
+	"json11.hpp"
 
-1504057726 source:c:\users\diegu7-cb1\documents\c++\dbe260717\tabla.cpp
+1504202890 source:c:\users\diegu7-cb1\documents\c++\dbe260717\tabla.cpp
 	"Tabla.h"
 
 1502849099 source:c:\users\diegu7-cb1\documents\c++\dbe260717\bloquecampo.cpp
@@ -158,10 +163,11 @@
 	"Campo.h"
 	"Lista.h"
 
-1503936014 c:\users\diegu7-cb1\documents\c++\dbe260717\campo.h
+1504199710 c:\users\diegu7-cb1\documents\c++\dbe260717\campo.h
 	<string.h>
 	<iostream>
 	<stdio.h>
+	"json11.hpp"
 
 1502863384 source:c:\users\diegu7-cb1\documents\c++\dbe260717\bloquemaster.cpp
 	"BloqueMaster.h"
@@ -171,18 +177,24 @@
 	<string.h>
 	<iostream>
 
-1503943134 source:c:\users\diegu7-cb1\documents\c++\dbe260717\campo.cpp
+1504199682 source:c:\users\diegu7-cb1\documents\c++\dbe260717\campo.cpp
 	"Campo.h"
 
-1504057726 source:c:\users\diegu7-cb1\documents\c++\dbe260717\engine.cpp
+1504203208 source:c:\users\diegu7-cb1\documents\c++\dbe260717\engine.cpp
 	"Engine.h"
 
-1503944283 c:\users\diegu7-cb1\documents\c++\dbe260717\engine.h
+1504202279 c:\users\diegu7-cb1\documents\c++\dbe260717\engine.h
 	"BloqueMaster.h"
 	"BloqueTabla.h"
 	"Lista.h"
 	"Tabla.h"
 	"Archivo.h"
+	<iostream>
+	"json11.hpp"
+	<vector>
+	<fstream>
+	<stdio.h>
+	<string.h>
 
 1502911908 source:c:\users\diegu7\c++things\dbe260717\bloquecampo.cpp
 	"BloqueCampo.h"
@@ -235,10 +247,10 @@
 1504057726 source:c:\users\diegu7-cb1\documents\c++\dbe260717\registro.cpp
 	"Registro.h"
 
-1503941814 source:c:\users\diegu7-cb1\documents\c++\dbe260717\celda.cpp
+1504196554 source:c:\users\diegu7-cb1\documents\c++\dbe260717\celda.cpp
 	"Celda.h"
 
-1503941543 c:\users\diegu7-cb1\documents\c++\dbe260717\celda.h
+1504196484 c:\users\diegu7-cb1\documents\c++\dbe260717\celda.h
 	<stdio.h>
 	<string.h>
 	"Campo.h"
@@ -267,4 +279,19 @@
 
 1503949961 source:c:\users\diegu7\c++things\dbe260717\celda.cpp
 	"Celda.h"
+
+1497998902 c:\users\diegu7-cb1\documents\c++\dbe260717\json11.hpp
+	<string>
+	<vector>
+	<map>
+	<memory>
+	<initializer_list>
+
+1497998902 source:c:\users\diegu7-cb1\documents\c++\dbe260717\json11.cpp
+	"json11.hpp"
+	<cassert>
+	<cmath>
+	<cstdlib>
+	<cstdio>
+	<limits>
 

@@ -131,6 +131,61 @@ int Tabla::tamReg(){
     return tam;
 }
 
+Json Tabla::registrosToJson(){
+    loadRegs();
+    vector<vector<Json>> jRegistros;
+    for(int i = 0; i < cantReg; i++){
+        vector<Json> celdasDeRegs;
+        for(int k = 0; k < cantCampos; k++){
+            int tipo = campos->index(k)->tipo;
+            if(tipo == 1){
+                string data = registros->index(i)->celdas->index(k)->data;
+                Json celda = Json::object{
+                    {"tipo", tipo},
+                    {"data", data}
+                };
+                celdasDeRegs.push_back(celda);
+            }
+            else{
+                int data = registros->index(i)->celdas->index(k)->getInt();
+                Json celda = Json::object{
+                    {"tipo", tipo},
+                    {"data", data}
+                };
+                celdasDeRegs.push_back(celda);
+            }
+        }
+        jRegistros.push_back(celdasDeRegs);
+    }
+    Json regs = Json::object{
+        {"cantReg", cantReg},
+        {"Registros", jRegistros}
+    };
+    return regs;
+}
+
+Json Tabla::camposToJson(){
+    loadCampos();
+    vector<Json> jCampos;
+    for(int i = 0; i < cantCampos; i++){
+        jCampos.push_back(campos->index(i)->to_json());
+    }
+    Json cams = Json::object{
+        {"cantCampos", cantCampos},
+        {"Campos", jCampos}
+    };
+    return cams;
+}
+
+Json Tabla::tablaToJson(){
+    Json tab = Json::object{
+        {"Nombre", nombre},
+        {"Campos", camposToJson()},
+        {"Registros", registrosToJson()}
+    };
+    return tab;
+}
+
 void Tabla::loadTabla(char * data){
     int pos = 0;
     memcpy(&nombre[0], &data[pos], 20);

@@ -13,6 +13,14 @@ void Campo::setAttributes(char * n, int t){
     regSize = t == 1 ? 20 : 4;
 }
 
+Json Campo::to_json(){
+    Json js = Json::object{
+        {"nombre", nombre},
+        {"tipo", tipo}
+    };
+    return js;
+}
+
 void Campo::loadCampo(char* data){
     int pos = 0;
     memcpy(&nombre[0], &data[pos], 20);
