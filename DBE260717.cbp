@@ -64,6 +64,8 @@
 		<Unit filename="Tabla.cpp" />
 		<Unit filename="Tabla.h" />
 		<Unit filename="db.txt" />
+		<Unit filename="json11.cpp" />
+		<Unit filename="json11.hpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
