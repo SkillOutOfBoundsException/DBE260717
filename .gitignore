@@ -79,12 +79,6 @@ $RECYCLE.BIN/
 *.lnk
 
 #CodeBlocks
-*.depend
-*.layout
 
 #Proyect
-*.txt
-main.cpp
-*.hpp
-*.cbp
 *.json
