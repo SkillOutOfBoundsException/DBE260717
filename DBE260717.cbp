@@ -12,6 +12,7 @@
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
+					<Add option="-std=c++11" />
 					<Add option="-g" />
 					<Add directory="include" />
 					<Add directory="../DBE260717" />
@@ -64,6 +65,25 @@
 		<Unit filename="Tabla.h" />
 		<Unit filename="db.txt" />
 		<Unit filename="main.cpp" />
+		<Unit filename="rapidjson/allocators.h" />
+		<Unit filename="rapidjson/document.h" />
+		<Unit filename="rapidjson/encodedstream.h" />
+		<Unit filename="rapidjson/encodings.h" />
+		<Unit filename="rapidjson/filereadstream.h" />
+		<Unit filename="rapidjson/filewritestream.h" />
+		<Unit filename="rapidjson/fwd.h" />
+		<Unit filename="rapidjson/istreamwrapper.h" />
+		<Unit filename="rapidjson/memorybuffer.h" />
+		<Unit filename="rapidjson/memorystream.h" />
+		<Unit filename="rapidjson/ostreamwrapper.h" />
+		<Unit filename="rapidjson/pointer.h" />
+		<Unit filename="rapidjson/prettywriter.h" />
+		<Unit filename="rapidjson/rapidjson.h" />
+		<Unit filename="rapidjson/reader.h" />
+		<Unit filename="rapidjson/schema.h" />
+		<Unit filename="rapidjson/stream.h" />
+		<Unit filename="rapidjson/stringbuffer.h" />
+		<Unit filename="rapidjson/writer.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
