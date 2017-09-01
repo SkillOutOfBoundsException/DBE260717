@@ -40,7 +40,7 @@ void addCampo(char* nombre, int tipo, BloqueMaster * bm);	//Adds a field to the 
 
 void addRegistro(char * data, BloqueMaster * bm);		//Adds an entry to the table
 char * generateReg();		//Returns a char * entry for the table through cmd and user input
-int tamReg();				//Returns the size of an entry for the table
+int tamReg();			//Returns the size of an entry for the table
 
 Json registrosToJson();						//Returns a json conataining all of its entries
 Json camposToJson();						//Returns a json containing all of its fields
@@ -61,7 +61,7 @@ A class that represents a field of a table. It can be one of two types: int or c
 
 ```c++
 char * nombre;			//Name of the field
-int tipo;				//Type of field (1 represents a char[20], 0 represents an int)
+int tipo;			//Type of field (1 represents a char[20], 0 represents an int)
 int regSize;			//Size of the field in bytes
 ```
 
@@ -71,7 +71,7 @@ A class that represents an entry of a table. Its information is stored as binary
 
 ```c++
 char * data;			//Entry data
-int len;				//Size of the entry
+int len;			//Size of the entry
 ```
 
 #### Celda.h
@@ -88,17 +88,17 @@ char * data;			//Char array that represents the entry of the field it stores
 This is the class that manages the entire database and its tables. It is able to create tables, add fields to a table, add entries to a table and erase the database. In its constructor it automatically loads the database from disk, and also is able to be exported onto a json and imported from a json. These are its attributes and methods:
 
 ```c++
-void format();											//Formats the entire database
-void load();											//Loads the database
-void addTabla(char* nombre);							 //Adds a table to the database
+void format();								//Formats the entire database
+void load();								//Loads the database
+void addTabla(char* nombre);				//Adds a table to the database
 void addCampoToTabla(int idTabla, char * nombre, int tipo);//Adds a field to a table
 void addRegistroToTabla(int idTabla, char * data = 0);	   //Adds an entry to a table
 
-Tabla * searchTabla(int id);							//Searches a table through its id
+Tabla * searchTabla(int id);					//Searches a table through its id
 Tabla * searchTablaAtBloque(int id, BloqueTabla * bt);	  //Searches a table on a BloqueTabla
-BloqueTabla * searchBloqueTabla(int id);				//Returns the BloqueTabla containing the table
+BloqueTabla * searchBloqueTabla(int id);		//Returns the BloqueTabla containing the table
 
-void addCamposFromJson(int idTabla, Json jcampos);		//Takes a json containing fields and adds them to a table
+void addCamposFromJson(int idTabla, Json jcampos);	//Takes a json containing fields and adds them to a table
 void addRegistrosFromJson(int idTabla, Json jregistros); //Takes a json containing entries aqnd adds them to a table
 
 void writeJson();					//Writes a json on disk containing the entire database
@@ -129,7 +129,7 @@ int num;	//Number of the block, which also represents its relative physical loca
 int sizeB; 	//Size of the Block
 
 char * toChar();		//Converts its attibutes and whatever it stores a char * to be written on disk
-void load(char* data);	//Loads the object from a char *
+void load(char* data);		//Loads the object from a char *
 
 void write();			//Using num it writes itself onto secondary memory
 void read();			//Using num it reads the size of the block to load the data it stored
@@ -142,9 +142,9 @@ This class contains the attributes that manages the relative physical location o
 ```c++
 int primerBloqueTabla;		//The first BloqueTabla that is written on disk, will ALWAYS be 1
 int actualBloqueTabla;		//The last BloqueTabla that is on the file
-int cantTablas;			   //The number of tables on the database
-int cantBloqueTabla;	   //The number of TablaBloques on the database
-int cantBloques;		  //The number of Blocks on the database (counting itself)
+int cantTablas;			//The number of tables on the database
+int cantBloqueTabla;	   	//The number of TablaBloques on the database
+int cantBloques;		//The number of Blocks on the database (counting itself)
 ```
 
 #### BloqueTabla.h
