@@ -18,6 +18,8 @@ void Engine::load(){
 }
 
 void Engine::format(){
+    arch->open("w");
+    arch->close();
     bm = new BloqueMaster();
     bm->write();
 }
@@ -88,7 +90,7 @@ Tabla * Engine::searchTabla(int id){
 Tabla * Engine::searchTablaAtBloque(int id, BloqueTabla * bt){
     for(int i = 0; i < bt->cantTablas; i++){
         Tabla * temp = bt->tablas->index(i);
-        if(idTabla == temp->id){
+        if(id == temp->id){
             return temp;
         }
     }

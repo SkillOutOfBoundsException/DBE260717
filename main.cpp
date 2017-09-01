@@ -20,6 +20,19 @@ int main(){
 
     Engine * e = new Engine();
 
+//    e->addTabla("tablaTest");
+//
+//    e->addCampoToTabla(0, "Nombre", 1);
+//    e->addCampoToTabla(0, "Edad", 0);
+//
+//    e->addRegistroToTabla(0);
+//    e->addRegistroToTabla(0);
+//    e->addRegistroToTabla(0);
+
+    //e->writeJson();
+
+    e->readJson();
+    e->printTablas();
 
     return 0;
 }

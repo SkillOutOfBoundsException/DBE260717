@@ -200,9 +200,9 @@ void Tabla::jsonToCampos(Json jcampos, BloqueMaster * bm){
 void Tabla::jsonToRegistros(Json jregistros, BloqueMaster * bm){
     int cr = jregistros["cantReg"].int_value();
     for(int k = 0; k < cr; k++){
-        char * data = new char[searchTabla(i)->tamReg()];
+        char * data = new char[tamReg()];
         int pos = 4;
-        for(int j = 0; j < cc; j++){
+        for(int j = 0; j < cantCampos; j++){
             Json celda = jregistros["Registros"][k][j];
             int tipo = celda["tipo"].int_value();
             if(tipo == 1){
@@ -330,7 +330,6 @@ void Tabla::printTabla(){
         registros->index(i)->printRegistro();
         cout << endl;
     }
-
 
     //cout << primerBloqueCampo << endl;
     //cout << actualBloqueCampo << endl;
