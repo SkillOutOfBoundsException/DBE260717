@@ -22,18 +22,18 @@ json11.cpp
 The tables have a header that includes the following attributes and methods:
 
 ```c++
-char * nombre;								//Name of the table
-int id;									//Id of the table
-int primerBloqueCampo;							//A "pointer" to the first block of fields
-int actualBloqueCampo;							//A "pointer" to the last block of fields
-int primerBloqueReg;							//A "pointer" to the first block of entries
-int actualBloqueReg;							//A "pointer" to the last block of entries
+char * nombre;							//Name of the table
+int id;								//Id of the table
+int primerBloqueCampo;						//A "pointer" to the first block of fields
+int actualBloqueCampo;						//A "pointer" to the last block of fields
+int primerBloqueReg;						//A "pointer" to the first block of entries
+int actualBloqueReg;						//A "pointer" to the last block of entries
 
-int cantCampos;								//Number of fields in the table
-int cantReg;								//Number of entries in the table
+int cantCampos;							//Number of fields in the table
+int cantReg;							//Number of entries in the table
 
-int cantBloqueCampos;							//Number of blocks storing the fields
-int cantBloqueReg;							//Number of blocks storing the entires
+int cantBloqueCampos;						//Number of blocks storing the fields
+int cantBloqueReg;						//Number of blocks storing the entires
 
 bool campoSpace(Campo *);					//Returns true if there is enough space for another 
 void addCampo(char* nombre, int tipo, BloqueMaster * bm);	//Adds a field to the table
