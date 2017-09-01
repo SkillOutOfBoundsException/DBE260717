@@ -23,7 +23,7 @@ The tables have a header that includes the following attributes and methods:
 
 ```c++
 char * nombre;								//Name of the table
-int id;										//Id of the table
+int id;									//Id of the table
 int primerBloqueCampo;							//A "pointer" to the first block of fields
 int actualBloqueCampo;							//A "pointer" to the last block of fields
 int primerBloqueReg;							//A "pointer" to the first block of entries
@@ -38,18 +38,18 @@ int cantBloqueReg;							//Number of blocks storing the entires
 bool campoSpace(Campo *);					//Returns true if there is enough space for another 
 void addCampo(char* nombre, int tipo, BloqueMaster * bm);	//Adds a field to the table
 
-void addRegistro(char * data, BloqueMaster * bm);			//Adds an entry to the table
+void addRegistro(char * data, BloqueMaster * bm);		//Adds an entry to the table
 char * generateReg();		//Returns a char * entry for the table through cmd and user input
-int tamReg();			    //Returns the size of an entry for the table
+int tamReg();				//Returns the size of an entry for the table
 
 Json registrosToJson();						//Returns a json conataining all of its entries
 Json camposToJson();						//Returns a json containing all of its fields
-Json tablaToJson();							//Returns a json that represents the entire table
+Json tablaToJson();						//Returns a json that represents the entire table
 
-void jsonToCampos(Json jcampos, BloqueMaster * bm);			//Turns the json into fields
+void jsonToCampos(Json jcampos, BloqueMaster * bm);		//Turns the json into fields
 void jsonToRegistros(Json jregistros, BloqueMaster * bm);	//Turns the json into entries
 
-char * toChar();				//Converts its attibutes to a char * to be written on disk
+char * toChar();			//Converts its attibutes to a char * to be written on disk
 void loadTabla(char*);			//Loads the object from a char *
 ```
 
