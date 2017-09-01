@@ -68,4 +68,67 @@ int main(){
             Formas de manejar colisiones:
                 Sumarle 1 a fnHash(k);
 
+    Upcoming changes:
+
+        void Registro::insertar(){
+            ...
+            int nBloque = ...
+            int numDeRegRel = ...
+            ...
+            IdxEntry * entry = new IdxEntry(tabla, nBloque, numDeRegRel, llave);
+            tabla->indice->agregarEntrada(entry); //indice es tipo HashTable
+         }
+
+         Registro * Tabla::buscarRegistro(char * id){
+            IdxEntry * entry = indice->buscar(id);
+            if(entry == null)
+                return null;
+            Registro * reg = cargarRegistro(entry->nB, entry->nRR);
+            return reg;
+         }
+
+    Nuevas classes para manejar indices:
+
+        IdxEntry{
+            int numBloque;
+            int numRegistroRelativo;
+        }
+
+        HashTableEntry{
+            int primerBloqueLlave;
+            int actualBloqueLlave;
+        }
+
+        IdxEntry * Indice::Buscar(char * id){
+            int pos = fnHash(id);
+            int bloqueRelativo = pos/CANT_HASH_TABLE_ENTRIES_POR_BLOQUE;
+            int entradaRelativa = pos%CANT_HASH_TABLE_ENTRIES_POR_BLOQUE;
+            int bloqueActual = tabla->primerBloqueIndice;
+            for(int i = 0; i < bloqueRelativo; i++){
+                BloqueHashTable * bht = new BloqueHashTable(bloqueActual);
+                bht->load();
+                bloqueActual = bht->sig;
+                delete bht;
+            }
+            BloqueHashTable * bht = new BloqueHashTAble(bloqueAcutal);
+            bht->load();
+            HashTableEntry * hte = bht->entradas->get(entradaRelativa);
+            int bloqueLlaves = hte->primerBloqueLlaves;
+            while(bloqueLlave != hte->actualBloqueLlave){
+                BloqueIdxEntries * bie = new BloqueIdxEntries(bloqueLlave);
+                bie->load();
+                for(int i = 0; i < bie->cantEntradas; i++){
+                    IdxEntry * entry = bie->entradas->get(i);
+                    if(entry->id ?==? id)
+                        return entry;
+                    delete entry;
+                }
+                bloqueLlaves = b->sig;
+                delete b;
+            }
+            return null;
+        }
+
+        mit ocw introduction to algorithm
+            buscar hash tables;
 */

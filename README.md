@@ -2,8 +2,6 @@
 
 A project that aims to create a small simple database engine. 
 
-
-
 ## Class Breakdown
 
 ### Json Library
@@ -24,26 +22,26 @@ json11.cpp
 The tables have a header that includes the following attributes and methods:
 
 ```c++
-char * nombre;
-int id;
-int primerBloqueCampo;
-int actualBloqueCampo;
-int primerBloqueReg;
-int actualBloqueReg;
+char * nombre;									//Name of the table
+int id;										   //Id of the table
+int primerBloqueCampo;							//A "pointer" to the first block of fields
+int actualBloqueCampo;							//A "pointer" to the last block of fields
+int primerBloqueReg;							//A "pointer" to the first block of entries
+int actualBloqueReg;							//A "pointer" to the last block of entries
 
-int cantCampos;
-int cantReg;
+int cantCampos;									//Number of fields in the table
+int cantReg;									//Number of entries in the table
 
-int cantBloqueCampos;
-int cantBloqueReg;
+int cantBloqueCampos;							//Number of blocks storing the fields
+int cantBloqueReg;								//Number of blocks storing the entires
 bool campoSpace(Campo *);
-void addCampo(char* nombre, int tipo, BloqueMaster * bm);
+void addCampo(char* nombre, int tipo, BloqueMaster * bm);	//Adds a field to the table
 
-void addRegistro(char * data, BloqueMaster * bm);
-char * generateReg();
-int tamReg();
+void addRegistro(char * data, BloqueMaster * bm);			//Adds an entry to the table
+char * generateReg();		//Returns a char * entry for the table through cmd and user input
+int tamReg();			    //Returns the size of an entry for the table
 
-Json registrosToJson();
+Json registrosToJson();		
 Json camposToJson();
 Json tablaToJson();
 
@@ -77,16 +75,34 @@ int len;
 
 #### Celda.h
 
-This class is used to properly read the entries of a table. It has a pointer to its corresponding field.
+AKA CampoDato. This class is used to properly read the entries of a table. It has a pointer to its corresponding field.
 
 ```c++
 Campo * campo;
 char * data;
 ```
 
+#### Engine.h
 
+This is the class that manages the entire database and its tables. It is able to create tables, add fields to a table, add entries to a table and erase the database. In its constructor it automatically loads the database from disk, and also is able to be exported onto a json and imported from a json. These are its attributes and methods:
 
-###Blocks
+```c++
+void format();
+void load();
+void addTabla(char* nombre);
+void addCampoToTabla(int idTabla, char * nombre, int tipo);
+void addRegistroToTabla(int idTabla, char * data = 0);
+
+Tabla * searchTabla(int id);
+BloqueTabla * searchBloqueTabla(int id);
+
+void writeJson();
+void readJson();
+
+void loadTablas();
+```
+
+### Blocks
 
 We used blocks to store our database data. The classes that are written as blocks are:
 
@@ -150,22 +166,3 @@ This class stores the entries of a table to be written in secondary memory. Its 
 bool addReg(Registro * r);
 ```
 
-#### Engine.h
-
-This is the class that manages the entire database and its tables. It is able to create tables, add fields to a table, add entries to a table and erase the database. In its constructor it automatically loads the database from disk, and also is able to be exported onto a json and imported from a json. These are its attributes and methods:
-
-```c++
-void format();
-void load();
-void addTabla(char* nombre);
-void addCampoToTabla(int idTabla, char * nombre, int tipo);
-void addRegistroToTabla(int idTabla, char * data = 0);
-
-Tabla * searchTabla(int id);
-BloqueTabla * searchBloqueTabla(int id);
-
-void writeJson();
-void readJson();
-
-void loadTablas();
-```
