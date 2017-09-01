@@ -88,13 +88,13 @@ char * data;			//Char array that represents the entry of the field it stores
 This is the class that manages the entire database and its tables. It is able to create tables, add fields to a table, add entries to a table and erase the database. In its constructor it automatically loads the database from disk, and also is able to be exported onto a json and imported from a json. These are its attributes and methods:
 
 ```c++
-void format();						//Formats the entire database
-void load();						//Loads the database
+void format();							//Formats the entire database
+void load();							//Loads the database
 void addTabla(char* nombre);					//Adds a table to the database
 void addCampoToTabla(int idTabla, char * nombre, int tipo);	//Adds a field to a table
-void addRegistroToTabla(int idTabla, char * data = 0);	   //Adds an entry to a table
+void addRegistroToTabla(int idTabla, char * data = 0);		//Adds an entry to a table
 
-Tabla * searchTabla(int id);				//Searches a table through its id
+Tabla * searchTabla(int id);					//Searches a table through its id
 Tabla * searchTablaAtBloque(int id, BloqueTabla * bt);		//Searches a table on a BloqueTabla
 BloqueTabla * searchBloqueTabla(int id);			//Returns the BloqueTabla containing the table
 
