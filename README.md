@@ -98,8 +98,8 @@ Tabla * searchTabla(int id);					//Searches a table through its id
 Tabla * searchTablaAtBloque(int id, BloqueTabla * bt);		//Searches a table on a BloqueTabla
 BloqueTabla * searchBloqueTabla(int id);			//Returns the BloqueTabla containing the table
 
-void addCamposFromJson(int idTabla, Json jcampos);	//Takes a json containing fields and adds them to a table
-void addRegistrosFromJson(int idTabla, Json jregistros); //Takes a json containing entries aqnd adds them to a table
+void addCamposFromJson(int idTabla, Json jcampos);		//Takes a json containing fields and adds them to a table
+void addRegistrosFromJson(int idTabla, Json jregistros);	//Takes a json containing entries aqnd adds them to a table
 
 void writeJson();					//Writes a json on disk containing the entire database
 void readJson();					//Loads a database stored on a json			
