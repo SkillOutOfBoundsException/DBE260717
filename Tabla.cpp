@@ -186,6 +186,41 @@ Json Tabla::tablaToJson(){
     return tab;
 }
 
+void Tabla::jsonToCampos(Json jcampos, BloqueMaster * bm){
+    int cc = jcampos["cantCampos"].int_value();
+    for(int k = 0; k < cc; k++){
+        Json campo = jcampos["Campos"][k];
+        char * cNom = new char[20];
+        strcpy(cNom, campo["nombre"].string_value().c_str());
+        int tipo = campo["tipo"].int_value();
+        addCampo(cNom, tipo, bm);
+    }
+}
+
+void Tabla::jsonToRegistros(Json jregistros, BloqueMaster * bm){
+    int cr = jregistros["cantReg"].int_value();
+    for(int k = 0; k < cr; k++){
+        char * data = new char[searchTabla(i)->tamReg()];
+        int pos = 4;
+        for(int j = 0; j < cc; j++){
+            Json celda = jregistros["Registros"][k][j];
+            int tipo = celda["tipo"].int_value();
+            if(tipo == 1){
+                char * cData = new char[20];
+                strcpy(cData, celda["data"].string_value().c_str());
+                memcpy(&data[pos], &cData[0], str_size);
+                pos = pos + str_size;
+            }
+            else{
+                int cData = celda["data"].int_value();
+                memcpy(&data[pos], &cData, int_size);
+                pos = pos + int_size;
+            }
+        }
+        addRegistro(data, bm);
+    }
+}
+
 void Tabla::loadTabla(char * data){
     int pos = 0;
     memcpy(&nombre[0], &data[pos], 20);

@@ -50,6 +50,9 @@ class Tabla{
         Json camposToJson();
         Json tablaToJson();
 
+        void jsonToCampos(Json jcampos, BloqueMaster * bm);
+        void jsonToRegistros(Json jregistros, BloqueMaster * bm);
+
         char * toChar();
         void loadTabla(char*);
 

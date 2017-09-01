@@ -32,7 +32,11 @@ class Engine{
         void addRegistroToTabla(int idTabla, char * data = 0);
 
         Tabla * searchTabla(int id);
+        Tabla * searchTablaAtBloque(int id, BloqueTabla * bt);
         BloqueTabla * searchBloqueTabla(int id);
+
+        void addCamposFromJson(int idTabla, Json jcampos);
+        void addRegistrosFromJson(int idTabla, Json jregistros);
 
         void writeJson();
         void readJson();
@@ -40,7 +44,6 @@ class Engine{
         void loadTablas();
         void printTablas();
         void printBloques();
-
 };
 
 #endif // ENGINE_H

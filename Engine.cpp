@@ -58,14 +58,7 @@ void Engine::addCampoToTabla(int idTabla, char * nombre, int tipo){
         cout << "tabla not found" << endl;
         return;
     }
-    Tabla * t = 0;
-    for(int i = 0; i < bt->cantTablas; i++){
-        Tabla * temp = bt->tablas->index(i);
-        if(idTabla == temp->id){
-            t = temp;
-            break;
-        }
-    }
+    Tabla * t = searchTablaAtBloque(idTabla, bt);
     t->addCampo(nombre, tipo, bm);
     bt->write();
 }
@@ -76,17 +69,30 @@ void Engine::addRegistroToTabla(int idTabla, char * data){
         cout << "tabla not found" << endl;
         return;
     }
-    Tabla * t = 0;
-    for(int i = 0; i < bt->cantTablas; i++){
-        Tabla * temp = bt->tablas->index(i);
-        if(idTabla == temp->id){
-            t = temp;
-            break;
-        }
-    }
+    Tabla * t = searchTablaAtBloque(idTabla, bt);
     data = data == 0 ? t->generateReg() : data;
     t->addRegistro(data, bm);
     bt->write();
+}
+
+Tabla * Engine::searchTabla(int id){
+    loadTablas();
+    for(int i = 0; i < bm->cantTablas; i++){
+        Tabla * t = tablas->index(i);
+        if(t->id == id)
+            return t;
+    }
+    return 0;
+}
+
+Tabla * Engine::searchTablaAtBloque(int id, BloqueTabla * bt){
+    for(int i = 0; i < bt->cantTablas; i++){
+        Tabla * temp = bt->tablas->index(i);
+        if(idTabla == temp->id){
+            return temp;
+        }
+    }
+    return 0;
 }
 
 BloqueTabla * Engine::searchBloqueTabla(int id){
@@ -103,14 +109,26 @@ BloqueTabla * Engine::searchBloqueTabla(int id){
     return 0;
 }
 
-Tabla * Engine::searchTabla(int id){
-    loadTablas();
-    for(int i = 0; i < bm->cantTablas; i++){
-        Tabla * t = tablas->index(i);
-        if(t->id == id)
-            return t;
+void Engine::addCamposFromJson(int idTabla, Json jcampos){
+    BloqueTabla * bt = searchBloqueTabla(idTabla);
+    if(bt == 0){
+        cout << "tabla not found" << endl;
+        return;
     }
-    return 0;
+    Tabla * t = searchTablaAtBloque(idTabla, bt);
+    t->jsonToCampos(jcampos, bm);
+    bt->write();
+}
+
+void Engine::addRegistrosFromJson(int idTabla, Json jregistros){
+    BloqueTabla * bt = searchBloqueTabla(idTabla);
+    if(bt == 0){
+        cout << "tabla not found" << endl;
+        return;
+    }
+    Tabla * t = searchTablaAtBloque(idTabla, bt);
+    t->jsonToRegistros(jregistros, bm);
+    bt->write();
 }
 
 void Engine::writeJson(){
@@ -144,36 +162,9 @@ void Engine::readJson(){
         strcpy(nom, jtabla["Nombre"].string_value().c_str());
         addTabla(nom);
         Json jcampos = jtabla["Campos"];
-        int cc = jcampos["cantCampos"].int_value();
-        for(int k = 0; k < cc; k++){
-            Json campo = jcampos["Campos"][k];
-            char * cNom = new char[20];
-            strcpy(cNom, campo["nombre"].string_value().c_str());
-            int tipo = campo["tipo"].int_value();
-            addCampoToTabla(i, cNom, tipo);
-        }
+        addCamposFromJson(i, jcampos);
         Json jregistros = jtabla["Registros"];
-        int cr = jregistros["cantReg"].int_value();
-        for(int k = 0; k < cr; k++){
-            char * data = new char[searchTabla(i)->tamReg()];
-            int pos = 4;
-            for(int j = 0; j < cc; j++){
-                Json celda = jregistros["Registros"][k][j];
-                int tipo = celda["tipo"].int_value();
-                if(tipo == 1){
-                    char * cData = new char[20];
-                    strcpy(cData, celda["data"].string_value().c_str());
-                    memcpy(&data[pos], &cData[0], str_size);
-                    pos = pos + str_size;
-                }
-                else{
-                    int cData = celda["data"].int_value();
-                    memcpy(&data[pos], &cData, int_size);
-                    pos = pos + int_size;
-                }
-            }
-            addRegistroToTabla(i, data);
-        }
+        addRegistrosFromJson(i, jregistros);
     }
 }
 
