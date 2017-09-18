@@ -144,8 +144,9 @@ void Engine::writeJson(){
         {"cantTablas", bm->cantTablas},
         {"Tablas", jTablas}
     };
+
     ofstream rip("db.json");
-    rip << jDB.dump();
+    rip << std::setw(2) << jDB.dump();
     rip.close();
 }
 

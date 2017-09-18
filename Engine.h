@@ -9,6 +9,7 @@
 #define str_size 20
 //json stuff
 #include <iostream>
+#include <iomanip>
 #include "json11.hpp"
 #include <vector>
 #include <fstream>

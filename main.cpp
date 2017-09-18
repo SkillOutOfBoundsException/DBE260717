@@ -20,18 +20,10 @@ int main(){
 
     Engine * e = new Engine();
 
-//    e->addTabla("tablaTest");
-//
-//    e->addCampoToTabla(0, "Nombre", 1);
-//    e->addCampoToTabla(0, "Edad", 0);
-//
-//    e->addRegistroToTabla(0);
-//    e->addRegistroToTabla(0);
-//    e->addRegistroToTabla(0);
+
 
     //e->writeJson();
 
-    e->readJson();
     e->printTablas();
 
     return 0;
@@ -144,4 +136,134 @@ int main(){
 
         mit ocw introduction to algorithm
             buscar hash tables;
+
+
+
+
+
+    Arboles B:
+        Nodo es un bloque
+        0 <= elementos <= m
+        0 <= hijos <= m+1
+
+        TamanoBloque = EncabezadoB + (m+1)*TamanoHijo + m * TamanoEntry
+
+        Implementar Busqueda:
+
+            int ArbolB::buscar(int x){
+                return buscar(x, root);
+            }
+
+            int ArbolB::buscar(int x, Bloque * sraiz){
+                if(sraiz == 0)
+                    return 0;
+                int hijo = 0;
+                for(int i = 0; i < M; i++){
+                    if(llaves[i]->key > key)
+                        break;
+                    if(llaves[i]->key > key)
+                        retur llaves[i];
+                    hijo++; hey b.
+                }
+                if(sraiz->esHoja())
+                    return 0;
+                Bloque * b = new Bloque(sraiz->Hijos[hijo]);
+                b->load();
+                return buscar(x, b);
+            }
+
+            Bloque * ArbolB::buscarBloqueObjetivo(){
+                if(sraiz == 0)
+                    return 0;
+                int hijo = 0;
+                for(int i = 0; i < M; i++){
+                    if(llaves[i]->key > key)
+                        break;
+                    if(llaves[i]->key > key)
+                        retur llaves[i];
+                    hijo++;
+                }
+                if(sraiz->esHoja())
+                    return sraiz;
+                Bloque * b = new Bloque(sraiz->Hijos[hijo]);
+                b->load();
+                return buscar(x, b);
+            }
+
+            void ArbolB::insert(int x){
+                //hey boo. -jackie-senpai
+                Bloque * bloque;
+                if(raiz == null){
+                    bloque = new Bloque();
+                    raiz = bloque;
+
+                }
+                else{
+                    bloque = buscarBloqueObjetivo();
+                    if(bloque == null)
+                        return -1;//colision
+                }
+                int pos = 0;
+                for(int i = 0; i < m; i++){
+                    if(llaves[i]->key > key)
+                        break;
+                    pos++;
+                }
+                for(int i = llaves->size(); i < pos; i++){
+                    llaves[i] = llaves[i - 1];
+                }
+                llaves[pos] = entry;
+                //pendiente promover
+
+            }
+
+
+            struct promocion(int llave, Bloque * hIzq, Bloque * hDer);
+
+            promocion * ArbolB::split(Bloque * actual){
+                Bloque * hermano = new Bloque();
+                int mitad = m + 1;
+                for(int i = 0; i < mitad + i + 1 <= m + 1; i++){
+                    if(mitad + i + 1 < m + 1){
+                        hermano->llaves = actual->llaves[mitad + 1 + i];
+                        actual->llaves[mitad + i + 1] = null; //eliminar
+                    }
+                    hermano->hijos[i] = actual->hijos[mitad + i + 1];
+                    actual->hijos->eliminarAt(mitad + i + 1);
+                }
+                return new promocion(actual->llaves->pop_back(), actual, hermano);
+            }
+
+            void ArbolB::crecer(Bloque * actual){
+                if(actual->llaves>size <= m){
+                    return
+                }
+                struct promocion * strp = split(actual);
+                if(actual->padre == null){
+                    raiz = new Bloque();
+                    actual->padre = raiz;
+                }
+                promover(actual->padre, strp);
+                crecer(actual->padre);
+            }
+
+            void ArbolB::promover(Bloque * padre, struct promocion * strp){
+                int pos = 0;
+                for(int i = 0; i < m + 1; i++){
+                    if(padre->llaves[i]->key > strp->key)
+                        break;
+                    pos++;
+                }
+                for(int i = padre->llaves->size(); i < pos; i--){
+                    hashbrows k e k
+                    padre->llaves[i] = padre->llaves[i-1];
+                }
+                for(int i = padre->llaves->size(); i > pos + 1; i--){
+                    padre->hijos[i] = padre->hijos[i-1];
+                }
+                padre->llaves[pos] = strp->key;
+                padre->hijos[pos] = strp->BloqueIzquierdo;
+                padre->hijos[pos + 1] = strp->BloqueDerecho;
+            }
 */
+

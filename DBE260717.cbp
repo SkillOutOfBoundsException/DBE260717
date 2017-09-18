@@ -43,6 +43,10 @@
 		<Unit filename="Bloque.h" />
 		<Unit filename="BloqueCampo.cpp" />
 		<Unit filename="BloqueCampo.h" />
+		<Unit filename="BloqueHash.cpp" />
+		<Unit filename="BloqueHash.h" />
+		<Unit filename="BloqueLlaves.cpp" />
+		<Unit filename="BloqueLlaves.h" />
 		<Unit filename="BloqueMaster.cpp" />
 		<Unit filename="BloqueMaster.h" />
 		<Unit filename="BloqueRegistro.cpp" />

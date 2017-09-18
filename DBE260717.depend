@@ -224,16 +224,17 @@
 1504207512 source:c:\users\diegu7\c++things\dbe260717\campo.cpp
 	"Campo.h"
 
-1504304162 source:c:\users\diegu7\c++things\dbe260717\engine.cpp
+1504647686 source:c:\users\diegu7\c++things\dbe260717\engine.cpp
 	"Engine.h"
 
-1504303530 c:\users\diegu7\c++things\dbe260717\engine.h
+1504647765 c:\users\diegu7\c++things\dbe260717\engine.h
 	"BloqueMaster.h"
 	"BloqueTabla.h"
 	"Lista.h"
 	"Tabla.h"
 	"Archivo.h"
 	<iostream>
+	<iomanip>
 	"json11.hpp"
 	<vector>
 	<fstream>
@@ -319,4 +320,10 @@
 	<cstdlib>
 	<cstdio>
 	<limits>
+
+1505163047 source:c:\users\diegu7\c++things\dbe260717\bloquehash.cpp
+	"BloqueHash.h"
+
+1505163228 c:\users\diegu7\c++things\dbe260717\bloquehash.h
+	"Bloque.h"
 
