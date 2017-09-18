@@ -3,7 +3,7 @@
 #include "Bloque.h"
 #include "Lista.h"
 #include "Tabla.h"
-#define tabla_size 56 //tabla size
+#define tabla_size 76 //tabla size
 #define int_size sizeof(int)
 #define str_size 20
 

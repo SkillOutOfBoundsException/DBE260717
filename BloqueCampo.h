@@ -3,7 +3,6 @@
 #include "Bloque.h"
 #include "Campo.h"
 #include "Lista.h"
-#define tabla_size 40 //tabla size
 #define campo_size 28
 #define int_size sizeof(int)
 #define str_size 20

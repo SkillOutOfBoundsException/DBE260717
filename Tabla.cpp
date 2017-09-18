@@ -12,6 +12,7 @@ Tabla::Tabla(int n){
     cantReg = 0;
     cantBloqueCampos = 0;
     cantBloqueReg = 0;
+    ht = new HashTable();
     campos = new Lista<Campo*>();
     registros = new Lista<Registro*>();
 }
@@ -27,7 +28,6 @@ void Tabla::addCampo(char * nombre, int tipo, BloqueMaster * bm){
         cout << "No hay espacio para mas campos" << endl;
         return;
     }
-
     cantCampos++;
     if(primerBloqueCampo == -1){
         BloqueCampo * bc = new BloqueCampo(bm->cantBloques);
@@ -69,6 +69,10 @@ void Tabla::addRegistro(char * data, BloqueMaster * bm){
     Registro * r = new Registro(tReg);
     r->setAttributes(data);
     cantReg++;
+    int numB;
+    int nrr;
+    char * id = new char[str_size];
+    memcpy(&id[0], &data[4], str_size);
     if(primerBloqueReg == -1){
         BloqueRegistro * br = new BloqueRegistro(bm->cantBloques, tReg);
         cantBloqueReg++;
@@ -77,6 +81,8 @@ void Tabla::addRegistro(char * data, BloqueMaster * bm){
         actualBloqueReg = br->num;
         br->addReg(r);
         br->write();
+        numB = br->num;
+        nrr = br->cantReg - 1;
     }
     else{
         BloqueRegistro * br = new BloqueRegistro(actualBloqueReg, tReg);
@@ -89,10 +95,17 @@ void Tabla::addRegistro(char * data, BloqueMaster * bm){
             actualBloqueReg = br2->num;
             br2->addReg(r);
             br2->write();
+            numB = br2->num;
+            nrr = br2->cantReg - 1;
+        }
+        else{
+            numB = br->num;
+            nrr = br->cantReg - 1;
         }
         br->write();
     }
     bm->write();
+    ht->newEntry(id, numB, nrr, bm);
 }
 
 char * Tabla::generateReg(){
@@ -243,6 +256,8 @@ void Tabla::loadTabla(char * data){
     pos = pos + 4;
     memcpy(&cantBloqueReg, &data[pos], 4);
     pos = pos + 4;
+    ht->loadHashTable(&data[pos]);
+    pos = pos + hTable_size;
 }
 
 char* Tabla::toChar(){
@@ -268,6 +283,8 @@ char* Tabla::toChar(){
     pos = pos + 4;
     memcpy(&data[pos], &cantBloqueReg, 4);
     pos = pos + 4;
+    memcpy(&data[pos], ht->toChar(), hTable_size);
+    pos = pos + hTable_size;
     return data;
 }
 
@@ -313,6 +330,26 @@ void Tabla::loadRegs(){
         }
         i = br->sig;
     }
+}
+
+void Tabla::printReg(char * id){
+    Llave * l = ht->buscar(id);
+    if(l == 0){
+        cout << "No se encontro" << endl;
+        return;
+    }
+    BloqueRegistro * br = new BloqueRegistro(l->numeroBloque, tamReg());
+    br->read();
+    Registro * r = br->registros->index(l->numeroDeRegistroRelativo);
+    r->celdas->clearList();
+    int pos = 4;
+    loadCampos();
+    for(int j = 0; j < cantCampos; j++){
+        Campo * c = campos->index(j);
+        r->celdas->pushBack(new Celda(c, &r->data[pos]));
+        pos = pos + c->regSize;
+    }
+    r->printRegistro();
 }
 
 void Tabla::printTabla(){

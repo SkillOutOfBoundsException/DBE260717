@@ -27,6 +27,9 @@ void Registro::loadRegistro(char * reg){
 }
 
 void Registro::printRegistro(){
+    if(celdas->isEmpty()){
+        cout << "ERROR: Entry was not loaded, cant print" << endl;
+    }
     cout << " ";
     for(int i = 0; i < celdas->length(); i++){
         cout << " | ";

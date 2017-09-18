@@ -52,6 +52,7 @@ void Engine::addTabla(char* nombre){
         bt->write();
     }
     bm->write();
+    addCampoToTabla(bm->cantTablas-1, "ID", 1);
 }
 
 void Engine::addCampoToTabla(int idTabla, char * nombre, int tipo){

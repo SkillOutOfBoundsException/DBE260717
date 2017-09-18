@@ -54,6 +54,10 @@ class Lista{
             return nodoAt(x)->data;
         };
 
+        void replace(int x, clase d){
+            nodoAt(x)->data = d;
+        }
+
         void insertAt(int x, clase d){
             if(x <= 0){
                 pushFront(d);

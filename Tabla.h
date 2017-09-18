@@ -8,11 +8,14 @@
 #include "Campo.h"
 #include "Celda.h"
 #include "Registro.h"
+#include "HashTable.h"
+#include "Llave.h"
 #include "BloqueMaster.h"
 #include "BloqueCampo.h"
 #include "BloqueRegistro.h"
 #include "json11.hpp"
-#define tabla_size 56 //tablaSize
+#define tabla_size 76 //tablaSize
+#define hTable_size 20//hashTableSize
 #define int_size sizeof(int)
 #define str_size 20
 
@@ -36,6 +39,8 @@ class Tabla{
         int cantBloqueCampos;
         int cantBloqueReg;
 
+        HashTable * ht;
+
         Lista<Campo*> * campos;
         Lista<Registro*> * registros;
 
@@ -45,6 +50,7 @@ class Tabla{
         void addRegistro(char * data, BloqueMaster * bm);
         char * generateReg();
         int tamReg();
+        void printReg(char * id);
 
         Json registrosToJson();
         Json camposToJson();

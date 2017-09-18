@@ -3,10 +3,12 @@
 #include "Bloque.h"
 #include "BloqueTabla.h"
 #include "BloqueMaster.h"
+#include "BloqueLlaves.h"
 #include "BloqueCampo.h"
 #include "Campo.h"
 #include "Engine.h"
 #include "Archivo.h"
+#include "Llave.h"
 #include "json11.hpp"
 #include <stdio.h>
 #include <iostream>
@@ -19,13 +21,15 @@ using namespace json11;
 int main(){
 
     Engine * e = new Engine();
+    /*
+    e->addTabla("niggers");
+    e->addCampoToTabla(0, "age", 0);
+    e->addRegistroToTabla(0);
+    //*/
+    e->searchTabla(0)->printReg("Diego");
 
 
-
-    //e->writeJson();
-
-    e->printTablas();
-
+    //e->printTablas();
     return 0;
 }
 
@@ -80,7 +84,7 @@ int main(){
             int nBloque = ...
             int numDeRegRel = ...
             ...
-            IdxEntry * entry = new IdxEntry(tabla, nBloque, numDeRegRel, llave);
+            IdxEntry * entry = new IdxEntry(tabla, nBloque, numDeRegRel, llave, id);
             tabla->indice->agregarEntrada(entry); //indice es tipo HashTable
          }
 
@@ -106,10 +110,10 @@ int main(){
 
         IdxEntry * Indice::Buscar(char * id){
             int pos = fnHash(id);
-            int bloqueRelativo = pos/CANT_HASH_TABLE_ENTRIES_POR_BLOQUE;
+            int bloqueHashRelativo = pos/CANT_HASH_TABLE_ENTRIES_POR_BLOQUE;
             int entradaRelativa = pos%CANT_HASH_TABLE_ENTRIES_POR_BLOQUE;
             int bloqueActual = tabla->primerBloqueIndice;
-            for(int i = 0; i < bloqueRelativo; i++){
+            for(int i = 0; i < bloqueHashRelativo; i++){
                 BloqueHashTable * bht = new BloqueHashTable(bloqueActual);
                 bht->load();
                 bloqueActual = bht->sig;
@@ -118,7 +122,7 @@ int main(){
             BloqueHashTable * bht = new BloqueHashTAble(bloqueAcutal);
             bht->load();
             HashTableEntry * hte = bht->entradas->get(entradaRelativa);
-            int bloqueLlaves = hte->primerBloqueLlaves;
+            int bloqueLlave = hte->primerBloqueLlaves;
             while(bloqueLlave != hte->actualBloqueLlave){
                 BloqueIdxEntries * bie = new BloqueIdxEntries(bloqueLlave);
                 bie->load();
