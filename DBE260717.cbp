@@ -59,8 +59,14 @@
 		<Unit filename="Celda.h" />
 		<Unit filename="Engine.cpp" />
 		<Unit filename="Engine.h" />
+		<Unit filename="HTEntry.cpp" />
+		<Unit filename="HTEntry.h" />
+		<Unit filename="HashTable.cpp" />
+		<Unit filename="HashTable.h" />
 		<Unit filename="Lista.cpp" />
 		<Unit filename="Lista.h" />
+		<Unit filename="Llave.cpp" />
+		<Unit filename="Llave.h" />
 		<Unit filename="Nodo.cpp" />
 		<Unit filename="Nodo.h" />
 		<Unit filename="Registro.cpp" />
