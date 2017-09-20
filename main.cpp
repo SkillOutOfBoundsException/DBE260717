@@ -21,15 +21,20 @@ using namespace json11;
 int main(){
 
     Engine * e = new Engine();
+
+    //e->format();
+
     /*
-    e->addTabla("niggers");
+    e->addTabla("Tabla1");
     e->addCampoToTabla(0, "age", 0);
     e->addRegistroToTabla(0);
-    //*/
-    e->searchTabla(0)->printReg("Diego");
 
+    //*/
+    //e->searchTabla(0)->printReg("diego");
+    //e->addRegistroToTabla(0);
 
     //e->printTablas();
+
     return 0;
 }
 

@@ -11,6 +11,7 @@
 #define str_size 20
 #define hash_size 16
 #define hTable_size 20
+#define hashXbloque 31
 
 using namespace std;
 

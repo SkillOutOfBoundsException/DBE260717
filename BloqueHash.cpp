@@ -1,12 +1,19 @@
 #include "BloqueHash.h"
 
 BloqueHash::BloqueHash(int t) : Bloque(t){
-    cantHashEntries = 31;
-    hashEntries = new Lista<HTEntry*>(31, new HTEntry());
+    cantHashEntries = hashXbloque;
+    hashEntries = new Lista<HTEntry*>();
+    reFillList();
 }
 
 HTEntry * BloqueHash::getHTEntry(int x){
     return hashEntries->index(x);
+}
+
+void BloqueHash::reFillList(){
+    hashEntries->clearList();
+    for(int i = 0; i < hashXbloque; i++)
+        hashEntries->pushBack(new HTEntry());
 }
 
 char * BloqueHash::toChar(){

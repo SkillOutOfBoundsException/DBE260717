@@ -6,7 +6,7 @@
 #define int_size sizeof(int)
 #define str_size 20
 #define hash_size 16
-#define hashXbloque 31
+#define hashXbloque 2
 
 class BloqueHash : public Bloque{
     public:
@@ -14,6 +14,7 @@ class BloqueHash : public Bloque{
         Lista<HTEntry*> * hashEntries;
         int cantHashEntries;    //to be removed
 
+        void reFillList();
         HTEntry * getHTEntry(int x);
 
         char * toChar();

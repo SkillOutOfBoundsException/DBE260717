@@ -5,13 +5,13 @@ HashTable::HashTable(){
     actualBloqueHash = -1;
     cantBloqueHash = 0;
     cantHash = 0;
-    m = 31;
+    m = hashXbloque;
 }
 
 Llave * HashTable::buscar(char * id){
     int pos = fnHash(id);
-    int bloqueHashRelativo = pos/31;
-    int entradaRelativa = pos%31;
+    int bloqueHashRelativo = pos/hashXbloque;
+    int entradaRelativa = pos%hashXbloque;
     int bloqueActual = primerBloqueHash;
     for(int i = 0; i < bloqueHashRelativo; i++){
         BloqueHash * bh = new BloqueHash(bloqueActual);
@@ -108,7 +108,7 @@ void HashTable::reHash(BloqueMaster * bm){
     while(i != -1){
         BloqueHash * bh = new BloqueHash(i);
         bh->read();
-        for(int k = 0; k < bh->cantHashEntries){
+        for(int k = 0; k < bh->cantHashEntries; k++){
             HTEntry * hte = bh->hashEntries->index(k);
             int j = hte->primerBloqueLlave;
             while(j != -1){
@@ -117,16 +117,29 @@ void HashTable::reHash(BloqueMaster * bm){
                 for(int z = 0; z < bl->cantLlaves; z++){
                     llaves->pushBack(bl->llaves->index(z));
                 }
+                bl->llaves->clearList();
+                bl->write();
+                delete bl;
             }
         }
+        bh->reFillList();
+        bh->write();
+        delete bh;
     }
     int goal = cantBloqueHash * 2;
+    int prev = -1;
     for(int i = cantBloqueHash; i < goal; i++){
         BloqueHash * bh = new BloqueHash(bm->cantBloques);
         bm->cantBloques++;
-        actualBloqueHash = bh->num;
         bh->write();
         bm->write();
+        BloqueHash * bh2 = new BloqueHash(actualBloqueHash);
+        bh2->read();
+        bh2->sig = bh->num;
+        actualBloqueHash = bh->num;
+        bh2->write();
+        delete bh;
+        delete bh2;
     }
     cantBloqueHash = goal;
     m = m*2;
@@ -137,7 +150,7 @@ void HashTable::reHash(BloqueMaster * bm){
 }
 
 int HashTable::fnHash(char * id){
-    int l = 0;
+    unsigned int l = 0;
     for(int i = 0; i < strlen(id); i++)
         l = l + int(id[i]);
     l = l * 100;
