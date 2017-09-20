@@ -30,10 +30,9 @@ int main(){
     e->addRegistroToTabla(0);
 
     //*/
-    //e->searchTabla(0)->printReg("diego");
     //e->addRegistroToTabla(0);
 
-    //e->printTablas();
+    e->printTablas();
 
     return 0;
 }

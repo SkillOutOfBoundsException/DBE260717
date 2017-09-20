@@ -350,6 +350,7 @@ void Tabla::printReg(char * id){
         pos = pos + c->regSize;
     }
     r->printRegistro();
+    cout << endl;
 }
 
 void Tabla::printTabla(){
