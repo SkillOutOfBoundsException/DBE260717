@@ -28,7 +28,7 @@ class Engine{
 
         void format();
         void load();
-        void addTabla(char* nombre);
+        int addTabla(char* nombre);
         void addCampoToTabla(int idTabla, char * nombre, int tipo);
         void addRegistroToTabla(int idTabla, char * data = 0);
 

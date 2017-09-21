@@ -23,7 +23,6 @@ char * Llave::toChar(){
     pos = pos + 4;
     memcpy(&data[pos], &numeroBloque, 4);
     pos = pos + 4;
-    cout << numeroBloque << endl;
     memcpy(&data[pos], &numeroDeRegistroRelativo, 4);
     pos = pos + 4;
     return data;

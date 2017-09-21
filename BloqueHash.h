@@ -6,7 +6,7 @@
 #define int_size sizeof(int)
 #define str_size 20
 #define hash_size 16
-#define hashXbloque 2
+#define hashXbloque 30
 
 class BloqueHash : public Bloque{
     public:

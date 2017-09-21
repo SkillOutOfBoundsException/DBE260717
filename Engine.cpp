@@ -24,7 +24,7 @@ void Engine::format(){
     bm->write();
 }
 
-void Engine::addTabla(char* nombre){
+int Engine::addTabla(char* nombre){
     Tabla * t = new Tabla(bm->cantTablas);
     t->setNombre(nombre);
     bm->cantTablas++;
@@ -36,6 +36,7 @@ void Engine::addTabla(char* nombre){
         bm->primerBloqueTabla = bt->num;
         bt->addTabla(t);
         bt->write();
+        delete bt;
     }
     else{
         BloqueTabla * bt = new BloqueTabla(bm->actualBloqueTabla);
@@ -48,11 +49,14 @@ void Engine::addTabla(char* nombre){
             bm->actualBloqueTabla = bt2->num;
             bt2->addTabla(t);
             bt2->write();
+            delete bt2;
         }
         bt->write();
+        delete bt;
     }
     bm->write();
     addCampoToTabla(bm->cantTablas-1, "ID", 1);
+    return bm->cantTablas - 1;
 }
 
 void Engine::addCampoToTabla(int idTabla, char * nombre, int tipo){

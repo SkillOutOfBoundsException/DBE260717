@@ -7,11 +7,12 @@
 #include "BloqueHash.h"
 #include "BloqueLlaves.h"
 #include "Lista.h"
+#include "Llave.h"
 #define int_size sizeof(int)
 #define str_size 20
 #define hash_size 16
 #define hTable_size 20
-#define hashXbloque 31
+#define hashXbloque 30
 
 using namespace std;
 

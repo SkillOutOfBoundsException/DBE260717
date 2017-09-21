@@ -6,6 +6,7 @@ HashTable::HashTable(){
     cantBloqueHash = 0;
     cantHash = 0;
     m = hashXbloque;
+    llaves = new Lista<Llave*>();
 }
 
 Llave * HashTable::buscar(char * id){
@@ -64,11 +65,13 @@ void HashTable::newEntry(char * id, int numBloque, int numRelRegistro, BloqueMas
         bloqueActual = bh->sig;
         delete bh;
     }
+
     BloqueHash * bh = new BloqueHash(bloqueActual);
     bh->read();
     HTEntry * hte = bh->getHTEntry(hTERelativa);
     addLlaveToHTEntry(l, hte, bm);
     bh->write();
+    delete bh;
     if(cantHash == m-1)
         reHash(bm); //SUBJECT TO CHANGE
 }
@@ -118,11 +121,14 @@ void HashTable::reHash(BloqueMaster * bm){
                     llaves->pushBack(bl->llaves->index(z));
                 }
                 bl->llaves->clearList();
+                bl->cantLlaves = 0;
+                j = bl->sig;
                 bl->write();
                 delete bl;
             }
         }
         bh->reFillList();
+        i = bh->sig;
         bh->write();
         delete bh;
     }

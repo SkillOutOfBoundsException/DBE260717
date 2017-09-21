@@ -72,7 +72,7 @@
 
 1501115148 c:\users\diegu7-cb1\documents\c++\dbe260717\nodo.h
 
-1505766015 source:c:\users\diegu7-cb1\documents\c++\dbe260717\main.cpp
+1506019560 source:c:\users\diegu7-cb1\documents\c++\dbe260717\main.cpp
 	<iostream>
 	"Lista.h"
 	"Bloque.h"
@@ -81,6 +81,7 @@
 	"BloqueLlaves.h"
 	"BloqueCampo.h"
 	"Campo.h"
+	"Tabla.h"
 	"Engine.h"
 	"Archivo.h"
 	"Llave.h"
@@ -89,6 +90,9 @@
 	<iostream>
 	<string>
 	<math.h>
+	<cstdlib>
+	<ctime>
+	<sstream>
 
 1501115148 source:c:\users\diegu7-cb1\documents\c++\dbe260717\nodo.cpp
 	"Nodo.h"
@@ -163,7 +167,7 @@
 	"BloqueRegistro.h"
 	"json11.hpp"
 
-1505766087 source:c:\users\diegu7-cb1\documents\c++\dbe260717\tabla.cpp
+1506019531 source:c:\users\diegu7-cb1\documents\c++\dbe260717\tabla.cpp
 	"Tabla.h"
 
 1502849099 source:c:\users\diegu7-cb1\documents\c++\dbe260717\bloquecampo.cpp
@@ -191,10 +195,10 @@
 1504199682 source:c:\users\diegu7-cb1\documents\c++\dbe260717\campo.cpp
 	"Campo.h"
 
-1505758176 source:c:\users\diegu7-cb1\documents\c++\dbe260717\engine.cpp
+1506018589 source:c:\users\diegu7-cb1\documents\c++\dbe260717\engine.cpp
 	"Engine.h"
 
-1505711734 c:\users\diegu7-cb1\documents\c++\dbe260717\engine.h
+1506014497 c:\users\diegu7-cb1\documents\c++\dbe260717\engine.h
 	"BloqueMaster.h"
 	"BloqueTabla.h"
 	"Lista.h"
@@ -346,7 +350,7 @@
 	<string.h>
 	<stdio.h>
 
-1505765610 source:c:\users\diegu7-cb1\documents\c++\dbe260717\llave.cpp
+1506013379 source:c:\users\diegu7-cb1\documents\c++\dbe260717\llave.cpp
 	"Llave.h"
 
 1505756694 c:\users\diegu7-cb1\documents\c++\dbe260717\llave.h
@@ -357,7 +361,7 @@
 1505923515 source:c:\users\diegu7-cb1\documents\c++\dbe260717\bloquehash.cpp
 	"BloqueHash.h"
 
-1505923515 c:\users\diegu7-cb1\documents\c++\dbe260717\bloquehash.h
+1506019813 c:\users\diegu7-cb1\documents\c++\dbe260717\bloquehash.h
 	"Bloque.h"
 	"HTEntry.h"
 	"Lista.h"
@@ -370,10 +374,10 @@
 	"Llave.h"
 	"Lista.h"
 
-1505923515 source:c:\users\diegu7-cb1\documents\c++\dbe260717\hashtable.cpp
+1506018264 source:c:\users\diegu7-cb1\documents\c++\dbe260717\hashtable.cpp
 	"HashTable.h"
 
-1505923515 c:\users\diegu7-cb1\documents\c++\dbe260717\hashtable.h
+1506019810 c:\users\diegu7-cb1\documents\c++\dbe260717\hashtable.h
 	<iostream>
 	<string.h>
 	<stdio.h>
@@ -381,6 +385,7 @@
 	"BloqueHash.h"
 	"BloqueLlaves.h"
 	"Lista.h"
+	"Llave.h"
 
 1505767199 c:\users\diegu7\c++things\dbe260717\htentry.h
 	<iostream>

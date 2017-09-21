@@ -83,6 +83,7 @@ void Tabla::addRegistro(char * data, BloqueMaster * bm){
         br->write();
         numB = br->num;
         nrr = br->cantReg - 1;
+        delete br;
     }
     else{
         BloqueRegistro * br = new BloqueRegistro(actualBloqueReg, tReg);
@@ -97,12 +98,14 @@ void Tabla::addRegistro(char * data, BloqueMaster * bm){
             br2->write();
             numB = br2->num;
             nrr = br2->cantReg - 1;
+            delete br2;
         }
         else{
             numB = br->num;
             nrr = br->cantReg - 1;
         }
         br->write();
+        delete br;
     }
     bm->write();
     ht->newEntry(id, numB, nrr, bm);
@@ -120,7 +123,6 @@ char * Tabla::generateReg(){
         cout << endl;
         if(c->tipo == 1){
             char * d = new char[str_size];
-
             cin >> d;
             memcpy(&data[pos], &d[0], strlen(d));
             pos = pos + str_size;
@@ -304,6 +306,7 @@ void Tabla::loadCampos(){
         for(int k = 0; k < bc->cantCampos; k++)
             campos->pushBack(bc->campos->index(k));
         i = bc->sig;
+        delete bc;
     }
 }
 
@@ -329,6 +332,7 @@ void Tabla::loadRegs(){
             registros->pushBack(r);
         }
         i = br->sig;
+        delete br;
     }
 }
 
